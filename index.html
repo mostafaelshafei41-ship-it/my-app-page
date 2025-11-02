@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق تحدي الأبطال</title>
+    <style>
+        body { font-family: sans-serif; display: grid; place-items: center; min-height: 90vh; text-align: center; background: #f4f4f4; }
+        .container { background: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 600px; padding: 30px; margin: 20px; }
+        .logo { max-width: 120px; margin-bottom: 20px; }
+        h1 { color: #333; }
+        p { color: #555; line-height: 1.6; }
+        .buttons a {
+            display: block; /* يجعل كل زر في سطر */
+            padding: 12px 20px;
+            margin: 10px auto;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            max-width: 250px; /* تحديد عرض موحد */
+            transition: background-color 0.2s;
+        }
+        
+        /* تخصيص الأزرار */
+        .btn-amazon { background-color: #FF9900; } /* لون أمازون */
+        .btn-apk { background-color: #28a745; } /* لون أخضر للـ APK */
+        .btn-googleplay { background-color: #999; cursor: not-allowed; } /* لون رمادي لـ "قريباً" */
+
+        .buttons a:hover { background-color: #0056b3; }
+        .btn-amazon:hover { background-color: #e68a00; }
+        .btn-apk:hover { background-color: #218838; }
+        
+        .warning {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تطبيق تحدي الأبطال</h1>
+        <p>
+            هنا تضع وصفاً مختصراً وجذاباً لتطبيقك. ما هو "تحدي الأبطال"؟
+        </p>
+        
+        <div class="buttons">
+            <a href="https://www.amazon.com/dp/B0FY7ZXNPZ/" target="_blank" class="btn-amazon">
+                متوفر على متجر أمازون
+            </a>
+
+            <a href="app-release.apk" download class="btn-apk">
+                تحميل مباشر (APK)
+            </a>
+
+            <a href="#" class="btn-googleplay" onclick="return false;">
+                قريباً على Google Play
+            </a>
+        </div>
+        
+        <p class="warning">
+            <strong>تنبيه:</strong> عند التحميل المباشر (APK)، قد تحتاج إلى تفعيل خيار "تثبيت التطبيقات من مصادر غير معروفة" (Unknown Sources) في إعدادات الأمان بهاتفك.
+        </p>
+    </div>
+</body>
+</html>
