@@ -10,112 +10,129 @@
     
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* تحسين الخط */
             background-color: #f8f9fa;
             color: #343a40;
             line-height: 1.6;
         }
         .hero-section {
-            background: linear-gradient(45deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, #0056b3, #007bff);
             color: white;
-            padding: 80px 0;
+            padding: 80px 0 120px 0; /* زيادة المساحة السفلية */
             text-align: center;
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
+            border-bottom-left-radius: 50% 15%;
+            border-bottom-right-radius: 50% 15%;
+            position: relative;
         }
         .hero-section h1 {
             font-size: 3.5rem;
-            font-weight: bold;
+            font-weight: 900; /* خط أعرض */
             margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .hero-section p.lead {
             font-size: 1.25rem;
             max-width: 800px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
         }
         .app-logo {
             max-width: 180px;
             height: auto;
-            border-radius: 20%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-radius: 25px; /* تنعيم الحواف */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             margin-bottom: 30px;
+            border: 4px solid rgba(255,255,255,0.2);
         }
+
+        /* تنسيق الأزرار */
         .store-buttons a {
-            display: inline-block;
-            margin: 10px 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px;
             padding: 15px 30px;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 50px; /* جعل الأزرار دائرية الحواف */
             text-decoration: none;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            min-width: 220px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            min-width: 240px;
         }
         .store-buttons a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
-        .btn-amazon { background-color: #FF9900; color: white; }
-        .btn-google-play { background-color: #4285F4; color: white; }
-        .btn-apk { background-color: #28a745; color: white; }
+
+        /* 🔥 تنسيق زر الويب الجديد المميز 🔥 */
+        .btn-webapp { 
+            background: linear-gradient(45deg, #FFC107, #FF9800); 
+            color: #000 !important;
+            border: 2px solid #fff;
+            font-size: 1.3rem !important; /* أكبر قليلاً */
+            animation: pulse 2s infinite; /* تأثير النبض */
+        }
         
-        /* !!! هذا هو الكود الجديد الذي تم إضافته !!! */
-        .btn-apkpure { background-color: #00BFA5; color: white; }
-        
-        .btn-soon { background-color: #6c757d; color: white; cursor: not-allowed; }
+        /* تأثير النبض لجذب الانتباه */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+        }
+
+        .btn-amazon { background-color: #232f3e; color: white !important; }
+        .btn-google-play { background-color: #4285F4; color: white !important; }
+        .btn-apkpure { background-color: #00BFA5; color: white !important; }
+        .btn-soon { background-color: #6c757d; color: white !important; cursor: not-allowed; opacity: 0.7; }
 
         .features-section, .screenshots-section {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
         }
-        .features-section h2, .screenshots-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #007bff;
-            font-weight: bold;
-        }
         .feature-item {
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 20px;
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             margin-bottom: 30px;
             height: 100%; 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            transition: transform 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
         }
         .feature-item i {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #007bff;
-            margin-bottom: 15px;
-        }
-        .feature-item h3 {
-            font-size: 1.5rem;
-            color: #343a40;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
         
         .carousel-inner img {
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 5px solid white;
         }
 
         footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 40px 0;
             text-align: center;
             margin-top: 50px;
         }
         .apk-warning {
             font-size: 0.9em;
-            color: #e9ecef;
-            margin-top: 20px;
-            max-width: 500px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 30px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -126,31 +143,38 @@
             <img src="logo.png" alt="شعار تطبيق تحدي الأبطال" class="app-logo">
             <h1>مرحباً بك في تحدي الأبطال!</h1>
             <p class="lead">
-                استمتع بمجموعة متنوعة من الألعاب الرياضية الممتعة وتحديات مباشرة ضد لاعبين آخرين عبر الإنترنت. اختبر معرفتك وسرعتك في ألعاب تنافسية بنظام الأدوار مثل "بنك" و "خمن اللاعب؟"، ونافس على صدارة لوحة المتصدرين العالمية أو أنشئ غرفاً خاصة لتحدي أصدقائك. مع أسئلة متجددة باستمرار بواسطة الذكاء الاصطناعي ووسائل مساعدة استراتيجية، كل لعبة هي تحدٍ جديد!
+                استمتع بمجموعة متنوعة من الألعاب الرياضية الممتعة وتحديات مباشرة ضد لاعبين آخرين عبر الإنترنت. نافس على صدارة لوحة المتصدرين العالمية أو أنشئ غرفاً خاصة لتحدي أصدقائك.
             </p>
+            
             <div class="store-buttons">
+                <div class="mb-3">
+                    <a href="https://gameplaytahdyelaptal.netlify.app/" class="btn-webapp">
+                        <i class="bi bi-play-circle-fill"></i> العب الآن (بدون تحميل)
+                    </a>
+                </div>
+
                 <a href="https://www.amazon.com/dp/B0FY7ZXNPZ/" target="_blank" class="btn-amazon">
-                    <i class="bi bi-shop"></i> متوفر على أمازون
+                    <i class="bi bi-amazon"></i> متوفر على أمازون
                 </a>
                 
-                
                 <a href="https://apkpure.com/%D8%AA%D8%AD%D8%AF%D9%8A-%D8%A7%D9%84%D8%A3%D8%A8%D8%B7%D8%A7%D9%84/com.mostafa165.app" target="_blank" class="btn-apkpure">
-                    <img src="apkpure-logo.png" alt="APKPure" style="height: 20px; margin-left: 5px; vertical-align: middle;"> متوفر على APKPure
+                    <i class="bi bi-android2"></i> تحميل APKPure
                 </a>
                 
                 <a href="#" class="btn-soon btn-google-play" onclick="return false;">
                     <i class="bi bi-google-play"></i> قريباً على Google Play
                 </a>
             </div>
-            <p class="apk-warning mt-4">
-                <strong>تنبيه:</strong> عند التحميل المباشر (APK)، قد تحتاج إلى تفعيل خيار "تثبيت التطبيقات من مصادر غير معروفة" (Unknown Sources) في إعدادات الأمان بهاتفك.
+
+            <p class="apk-warning">
+                <strong>تنبيه:</strong> يمكنك اللعب فوراً من المتصفح عبر زر "العب الآن"، أو تحميل التطبيق بصيغة APK.
             </p>
         </div>
     </header>
 
     <section class="features-section">
         <div class="container">
-            <h2>لماذا تحدي الأبطال؟</h2>
+            <h2 class="mb-5">لماذا تحدي الأبطال؟</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-item">
@@ -168,8 +192,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item">
-                        <i class="bi bi-gift-fill"></i>
-                        <h3>جوائز ومكافآت يومية</h3>
+                        <i class="bi bi-trophy-fill"></i> <h3>جوائز ومكافآت يومية</h3>
                         <p>اجمع الجوائز والمكافآت الحصرية لتطوير حسابك وفتح محتوى جديد باستمرار.</p>
                     </div>
                 </div>
@@ -179,9 +202,9 @@
 
     <section class="screenshots-section bg-light">
         <div class="container">
-            <h2>لقطات من داخل اللعبة</h2>
+            <h2 class="mb-5">لقطات من داخل اللعبة</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
+                <div class="col-lg-8 col-md-10">
                     <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -200,11 +223,11 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -216,6 +239,9 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 تحدي الأبطال. جميع الحقوق محفوظة.</p>
+            <div class="mt-2">
+                <small>تم التطوير بواسطة Mostafa</small>
+            </div>
         </div>
     </footer>
 
