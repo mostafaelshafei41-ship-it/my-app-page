@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="تحدي الأبطال هي لعبة مسابقات كرة قدم أونلاين. نافس أصدقائك في معلومات الساحرة المستديرة، خمن اللاعب، وتصدر الدوري. العب الآن مجاناً.">
     <title>تحدي الأبطال - لعبة مسابقات كرة قدم أونلاين</title>
+    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4803557644630676"
      crossorigin="anonymous"></script>
     
@@ -16,15 +17,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
             color: #343a40;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+        
+        /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, #0056b3, #007bff);
             color: white;
             padding: 80px 0 120px 0;
             text-align: center;
-            border-bottom-left-radius: 50% 15%;
-            border-bottom-right-radius: 50% 15%;
+            border-bottom-left-radius: 50% 10%;
+            border-bottom-right-radius: 50% 10%;
             position: relative;
         }
         .hero-section h1 {
@@ -48,6 +51,7 @@
             border: 4px solid rgba(255,255,255,0.2);
         }
 
+        /* Buttons */
         .store-buttons a {
             display: inline-flex;
             align-items: center;
@@ -67,8 +71,6 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
-
-        /* زر الويب المميز */
         .btn-webapp { 
             background: linear-gradient(45deg, #FFC107, #FF9800); 
             color: #000 !important;
@@ -76,22 +78,17 @@
             font-size: 1.3rem !important;
             animation: pulse 2s infinite;
         }
-        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
         }
-
         .btn-amazon { background-color: #232f3e; color: white !important; }
         .btn-google-play { background-color: #4285F4; color: white !important; }
         .btn-apkpure { background-color: #00BFA5; color: white !important; }
         .btn-soon { background-color: #6c757d; color: white !important; cursor: not-allowed; opacity: 0.7; }
 
-        .features-section, .screenshots-section {
-            padding: 80px 0;
-            text-align: center;
-        }
+        /* Features */
         .feature-item {
             padding: 30px;
             border-radius: 20px;
@@ -100,40 +97,33 @@
             margin-bottom: 30px;
             height: 100%; 
             transition: transform 0.3s;
+            text-align: center;
         }
-        .feature-item:hover {
-            transform: translateY(-10px);
-        }
+        .feature-item:hover { transform: translateY(-10px); }
         .feature-item i {
             font-size: 3.5rem;
             color: #007bff;
             margin-bottom: 20px;
             display: inline-block;
         }
-        
+
+        /* Carousel */
         .carousel-inner img {
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             border: 5px solid white;
         }
 
+        /* Footer */
         footer {
             background-color: #212529;
             color: #adb5bd;
-            padding: 50px 0 20px 0; /* زيادة المساحة */
+            padding: 50px 0 20px 0;
             text-align: center;
             margin-top: 50px;
         }
-        /* تنسيق روابط الفوتر الهامة لأدسنس */
-        footer a {
-            color: #adb5bd;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9rem;
-        }
-        footer a:hover {
-            color: white;
-        }
+        footer a { color: #adb5bd; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        footer a:hover { color: white; }
         .footer-links {
             margin-bottom: 20px;
             border-bottom: 1px solid #343a40;
@@ -189,9 +179,11 @@
         </div>
     </header>
 
-    <section class="features-section">
+    <section class="features-section py-5">
         <div class="container">
-            <h2 class="mb-5">لماذا تحدي الأبطال؟</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">لماذا تحدي الأبطال؟</h2>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-item">
@@ -204,7 +196,7 @@
                     <div class="feature-item">
                         <i class="bi bi-people-fill"></i>
                         <h3>لعب جماعي أونلاين</h3>
-                        <p>نظام Matchmaking ذكي يضعك في مواجهة خصوم من مستواك، أو أنشئ غرفة خاصة (Private Room) والعب ضد أصدقائك مباشرة.</p>
+                        <p>نظام Matchmaking ذكي يضعك في مواجهة خصوم من مستواك، أو أنشئ غرفة خاصة والعب ضد أصدقائك مباشرة.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -217,9 +209,192 @@
         </div>
     </section>
 
-    <section class="screenshots-section bg-light">
+    <section class="game-guide-section py-5 bg-light">
         <div class="container">
-            <h2 class="mb-5">لقطات من داخل اللعبة</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">دليل اللاعب المحترف</h2>
+                <p class="text-muted">كل ما تحتاج معرفته عن أنظمة اللعب، احتساب النقاط، والترقي في المستويات</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-bar-chart-line-fill"></i> نظام التصنيف (Ranking)</h3>
+                        <p>تعتمد لعبة "تحدي الأبطال" على خوارزمية متقدمة لتقييم المهارة. يبدأ جميع اللاعبين بتصنيف 1000 نقطة. عند الفوز، تكتسب نقاطاً بناءً على قوة الخصم:</p>
+                        <ul>
+                            <li><strong>الفوز على خصم قوي:</strong> يمنحك نقاطاً مضاعفة (+25 نقطة أو أكثر).</li>
+                            <li><strong>الفوز على خصم ضعيف:</strong> يمنحك نقاطاً قليلة لضمان العدالة.</li>
+                            <li><strong>الخسارة:</strong> تفقدك نقاطاً، مما قد يؤدي لهبوطك للمستوى الأدنى.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-cpu-fill"></i> المتطلبات التقنية</h3>
+                        <p>تم تطوير اللعبة لتعمل بكفاءة وسرعة على جميع الأجهزة:</p>
+                        <ul>
+                            <li><strong>متصفحات الويب:</strong> Chrome, Firefox, Safari (الإصدارات الحديثة).</li>
+                            <li><strong>الإنترنت:</strong> تتطلب اللعبة اتصالاً مستقراً نظراً لطبيعة التنافس المباشر (Real-time).</li>
+                            <li><strong>السياسة:</strong> نستخدم أنظمة حماية لمنع استخدام أي برامج مساعدة (Bots) لضمان بيئة لعب عادلة للجميع.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rules-section py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 mb-2 rounded-pill">قوانين اللعب</span>
+                <h2 class="fw-bold">اكتشف 7 أنماط لعب مختلفة</h2>
+                <p class="text-muted" style="max-width: 700px; margin: 0 auto;">
+                    تحدي الأبطال ليست مجرد لعبة واحدة، بل هي مجموعة متكاملة من التحديات التي تختبر كل جوانب ثقافتك الكروية. إليك الدليل الرسمي لقوانين كل لعبة:
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">1. تحدي ريسك</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                مواجهة استراتيجية تتكون من <strong>4 فئات (Categories)</strong>، كل فئة تحتوي على 4 مستويات صعوبة (إجمالي 16 سؤال).
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-danger py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> النقاط تتصاعد حسب الصعوبة (5، 10، 20، 40). الإجابة الخاطئة لا تخصم نقاطاً. استخدم وسائل المساعدة بذكاء (سرقة السؤال، إظهار الاختيارات، تزويد الوقت) لحسم المنافسة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-person-bounding-box fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">2. خمن اللاعب؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لعبة ذكاء تفاعلية. لديك لاعب سري وخصمك لديه لاعب سري.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-primary py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> اطرح أسئلة ذكية (مثلاً: هل يلعب في الدوري الإنجليزي؟) لاستبعاد الخيارات. أول من يكتشف لاعب الخصم يفوز.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-life-preserver fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">3. اهبد صح</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                تحدي التقدير الرقمي. لا نطلب منك الرقم الدقيق، بل أقرب رقم صحيح.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-warning py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> في أسئلة مثل "كم عدد أهداف ميسي؟"، اللاعب الذي يكتب الرقم الأقرب للإجابة الصحيحة هو من يكسب الجولة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-wallet2 fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">4. تحدي البنك</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لعبة استراتيجية وإدارة مخاطر. كل إجابة صحيحة تزيد رصيدك المؤقت.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-success py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> يجب أن تضغط زر "بنك" لتثبيت نقاطك قبل انتهاء الوقت أو قبل الإجابة بالخطأ، وإلا ستفقد الرصيد المتراكم.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-eye-slash-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">5. أنا مين؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لغز الشخصية الغامضة. نعطيك 5 أوصاف متدرجة من الصعب جداً إلى السهل.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-info py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> المعرفة المبكرة تساوي نقاطاً أكثر. إذا عرفت اللاعب من الوصف الأول تربح 100 نقطة، ومن الوصف الأخير 20 نقطة فقط.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-list-ol fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">6. قائمة Top 10</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                هل تعرف ترتيب الهدافين أو الأكثر مشاركة؟ عليك ملء القائمة بالترتيب.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-secondary py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> خمن العناصر الموجودة في القائمة. المراكز الدنيا (الصعبة) تمنحك نقاطاً أعلى من المراكز الأولى المعروفة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-camera-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">7. مين في الصورة؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                اختبر معرفتك بالفرق. ستظهر لك <strong>الصورة الجماعية الرسمية للفريق (Squad Photo)</strong> قبل بداية المباراة.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-dark py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> انظر للصورة جيداً، وتعرف على وجوه اللاعبين في التشكيلة، ثم اكتب أسماءهم بشكل صحيح.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots-section py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-5 text-center fw-bold">لقطات من داخل اللعبة</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
