@@ -6,71 +6,184 @@
     <meta name="description" content="تحدي الأبطال هي لعبة مسابقات كرة قدم أونلاين. نافس أصدقائك في معلومات الساحرة المستديرة، خمن اللاعب، وتصدر الدوري. العب الآن مجاناً.">
     <title>تحدي الأبطال - لعبة مسابقات كرة قدم أونلاين</title>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4803557644630676"
-     crossorigin="anonymous"></script>
+    <!-- إعلانات Google -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4803557644630676" crossorigin="anonymous"></script>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- مكتبات CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            line-height: 1.7;
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00c6ff;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gradient-primary: linear-gradient(135deg, #0056b3, #00c6ff);
+            --gradient-secondary: linear-gradient(135deg, #ff6b6b, #ffa36c);
+            --shadow-color: rgba(0, 86, 179, 0.1);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
         }
         
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #0056b3, #007bff);
-            color: white;
-            padding: 80px 0 120px 0;
-            text-align: center;
-            border-bottom-left-radius: 50% 10%;
-            border-bottom-right-radius: 50% 10%;
-            position: relative;
+        * {
+            font-family: 'Tajawal', sans-serif;
         }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* تصميم الشريط العلوي المتحرك */
+        .top-bar {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .top-bar .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .top-bar .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        
+        /* تحسين Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 140px 0 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,154.7C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
         .hero-section h1 {
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 20px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: relative;
         }
-        .hero-section p.lead {
+        
+        .hero-section .lead {
             font-size: 1.25rem;
             max-width: 800px;
             margin: 0 auto 40px auto;
             opacity: 0.9;
+            position: relative;
         }
+        
+        .app-logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        
         .app-logo {
             max-width: 180px;
             height: auto;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            margin-bottom: 30px;
             border: 4px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
         }
-
-        /* Buttons */
+        
+        .app-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        
+        .app-logo-container::after {
+            content: '';
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s infinite;
+        }
+        
+        /* تحسين الأزرار */
         .store-buttons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             margin: 10px;
-            padding: 15px 30px;
+            padding: 16px 35px;
             font-size: 1.1rem;
             font-weight: bold;
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
             min-width: 240px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
+        
+        .store-buttons a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .store-buttons a:hover::before {
+            width: 100%;
+        }
+        
         .store-buttons a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.25);
         }
+        
         .btn-webapp { 
             background: linear-gradient(45deg, #FFC107, #FF9800); 
             color: #000 !important;
@@ -78,94 +191,273 @@
             font-size: 1.3rem !important;
             animation: pulse 2s infinite;
         }
+        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
         }
-        .btn-amazon { background-color: #232f3e; color: white !important; }
-        .btn-google-play { background-color: #4285F4; color: white !important; }
-        .btn-apkpure { background-color: #00BFA5; color: white !important; }
-        .btn-soon { background-color: #6c757d; color: white !important; cursor: not-allowed; opacity: 0.7; }
-
-        /* Features */
-        .feature-item {
-            padding: 30px;
-            border-radius: 20px;
-            background-color: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            height: 100%; 
-            transition: transform 0.3s;
-            text-align: center;
-        }
-        .feature-item:hover { transform: translateY(-10px); }
-        .feature-item i {
-            font-size: 3.5rem;
-            color: #007bff;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        /* Carousel */
-        .carousel-inner img {
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border: 5px solid white;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #212529;
-            color: #adb5bd;
-            padding: 50px 0 20px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-        footer a { color: #adb5bd; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-        footer a:hover { color: white; }
-        .footer-links {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #343a40;
-            padding-bottom: 20px;
-        }
-
-        .apk-warning {
-            font-size: 0.9em;
-            color: rgba(255,255,255,0.8);
-            margin-top: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            background: rgba(0,0,0,0.2);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        /* Blog Section */
-        .blog-section {
-            background-color: white;
-            padding: 80px 0;
+        
+        .btn-amazon { 
+            background: linear-gradient(45deg, #232f3e, #37475a); 
+            color: white !important; 
         }
         
-        .blog-card {
-            background: linear-gradient(135deg, #0056b3, #007bff);
-            color: white;
+        .btn-google-play { 
+            background: linear-gradient(45deg, #4285F4, #34A853); 
+            color: white !important; 
+        }
+        
+        .btn-apkpure { 
+            background: linear-gradient(45deg, #00BFA5, #00D4B4); 
+            color: white !important; 
+        }
+        
+        .btn-soon { 
+            background: linear-gradient(45deg, #6c757d, #868e96); 
+            color: white !important; 
+            cursor: not-allowed; 
+            opacity: 0.8; 
+        }
+        
+        .btn-soon:hover {
+            transform: none !important;
+        }
+        
+        /* تحسين الأقسام */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 70px;
+            height: 5px;
+            background: var(--gradient-primary);
+            border-radius: 5px;
+        }
+        
+        .section-subtitle {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        /* تحسين بطاقات المميزات */
+        .feature-item {
+            padding: 40px 30px;
             border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 86, 179, 0.2);
-            transition: all 0.3s ease;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             margin-bottom: 30px;
+            height: 100%; 
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-item:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+        
+        .feature-item i {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+        
+        /* تحسين بطاقات أنماط اللعب */
+        .game-mode-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            height: 100%;
+            background: white;
+            border: none;
+        }
+        
+        .game-mode-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .game-mode-header {
+            padding: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-mode-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            z-index: 0;
+        }
+        
+        .game-mode-icon {
+            font-size: 2rem;
+            margin-left: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-mode-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+        
+        .game-mode-body {
+            padding: 25px;
+        }
+        
+        .game-mode-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .game-mode-rule {
+            background: #f8f9fa;
+            border-right: 4px solid var(--primary-color);
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+        
+        /* تحسين قسم الأسئلة الشائعة */
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 22px 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+        
+        .faq-answer.show {
+            padding: 25px;
+            max-height: 1000px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.4s ease;
+        }
+        
+        .faq-icon.rotated {
+            transform: rotate(180deg);
+        }
+        
+        /* تحسين قسم المدونة */
+        .blog-card {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2);
+            transition: var(--transition);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+            opacity: 0.3;
         }
         
         .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.3);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 50px rgba(0, 86, 179, 0.3);
         }
         
         .blog-card h3 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 20px;
             font-weight: 900;
         }
@@ -178,134 +470,306 @@
         
         .btn-blog {
             background-color: white;
-            color: #0056b3;
+            color: var(--primary-color);
             border: none;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .btn-blog:hover {
             background-color: #f8f9fa;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            color: #0056b3;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            color: var(--primary-color);
         }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-            border-radius: 15px;
+        
+        /* تحسين الفوتر */
+        footer {
+            background: #212529;
+            color: #adb5bd;
+            padding: 60px 0 20px 0;
+            text-align: center;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-
-        .faq-question {
-            background: white;
-            padding: 20px 25px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
         }
-
-        .faq-question:hover {
+        
+        footer a { 
+            color: #adb5bd; 
+            text-decoration: none; 
+            margin: 0 12px; 
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        footer a:hover { 
+            color: white; 
+        }
+        
+        footer a:hover::after {
+            width: 100%;
+        }
+        
+        .footer-links {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-links::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 150px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* تحسين Carousel */
+        .carousel-inner img {
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 5px solid white;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        /* تحسين التحذيرات */
+        .apk-warning {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.9);
+            margin-top: 30px;
+            max-width: 600px;
+            margin-right: auto;
+            margin-left: auto;
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid #ffc107;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0 80px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .store-buttons a {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+            
+            .blog-card {
+                padding: 40px 25px;
+            }
+            
+            .blog-card h3 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* تأثيرات إضافية */
+        .floating-element {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: floatParticle 15s infinite linear;
+        }
+        
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) translateX(0); }
+            100% { transform: translateY(-100px) translateX(100px); }
+        }
+        
+        /* شريط التقدم */
+        .progress-section {
             background: #f8f9fa;
         }
-
-        .faq-answer {
-            padding: 0 25px;
-            background: white;
-            max-height: 0;
+        
+        .progress-item {
+            margin-bottom: 30px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .progress-bar-custom {
+            height: 12px;
+            background-color: #e9ecef;
+            border-radius: 10px;
             overflow: hidden;
-            transition: max-height 0.5s ease, padding 0.5s ease;
         }
-
-        .faq-answer.show {
-            padding: 20px 25px;
-            max-height: 1000px;
-        }
-
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .faq-icon.rotated {
-            transform: rotate(180deg);
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: var(--gradient-primary);
+            transition: width 1.5s ease-in-out;
+            width: 0;
         }
     </style>
 </head>
 <body>
-
-    <header class="hero-section">
+    <!-- شريط علوي متحرك -->
+    <div class="top-bar d-none d-md-block">
         <div class="container">
-            <img src="logo.png" alt="شعار لعبة تحدي الأبطال" class="app-logo">
-            <h1>مرحباً بك في تحدي الأبطال!</h1>
-            <p class="lead">
+            <div class="marquee">
+                <span>🏆 تحدي الأبطال - أقوى لعبة مسابقات كرة قدم عربية | العب الآن مجانًا | تحدى أصدقائك | اربح نقاطًا وارتقِ في سلم التصنيف العالمي | تحديثات أسبوعية | 🏆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="app-logo-container">
+                <img src="logo.png" alt="شعار لعبة تحدي الأبطال" class="app-logo floating-element">
+            </div>
+            <h1 class="animate__animated animate__fadeInDown" data-aos="fade-down">مرحباً بك في تحدي الأبطال!</h1>
+            <p class="lead animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
                 أقوى لعبة مسابقات كرة قدم عربية. اختبر معلوماتك الرياضية، تحدَّ أصدقائك في غرف خاصة، ونافس آلاف اللاعبين في وضع الأونلاين المباشر. هل تملك ما يلزم لتكون بطل الموسم؟
             </p>
             
-            <div class="store-buttons">
+            <div class="store-buttons" data-aos="fade-up" data-aos-delay="400">
                 <div class="mb-3">
                     <a href="https://play.tahady-elaptal.online/" class="btn-webapp">
                         <i class="bi bi-play-circle-fill"></i> العب الآن (بدون تحميل)
                     </a>
                 </div>
 
-                <a href="https://www.amazon.com/dp/B0FY7ZXNPZ/" target="_blank" class="btn-amazon">
-                    <i class="bi bi-amazon"></i> متوفر على أمازون
-                </a>
-                
-                <a href="https://apkpure.com/%D8%AA%D8%AD%D8%AF%D9%8A-%D8%A7%D9%84%D8%A3%D8%A8%D8%B7%D8%A7%D9%84/com.mostafa165.app" target="_blank" class="btn-apkpure">
-                    <i class="bi bi-android2"></i> تحميل APKPure
-                </a>
-                
-                <a href="#" class="btn-soon btn-google-play" onclick="return false;">
-                    <i class="bi bi-google-play"></i> قريباً على Google Play
-                </a>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <a href="https://www.amazon.com/dp/B0FY7ZXNPZ/" target="_blank" class="btn-amazon">
+                        <i class="bi bi-amazon"></i> متوفر على أمازون
+                    </a>
+                    
+                    <a href="https://apkpure.com/%D8%AA%D8%AD%D8%AF%D9%8A-%D8%A7%D9%84%D8%A3%D8%A8%D8%B7%D8%A7%D9%84/com.mostafa165.app" target="_blank" class="btn-apkpure">
+                        <i class="bi bi-android2"></i> تحميل APKPure
+                    </a>
+                    
+                    <a href="#" class="btn-soon btn-google-play" onclick="return false;">
+                        <i class="bi bi-google-play"></i> قريباً على Google Play
+                    </a>
+                </div>
             </div>
 
-            <p class="apk-warning">
-                <strong>تنبيه:</strong> يمكنك اللعب فوراً من المتصفح عبر زر "العب الآن" دون الحاجة لتثبيت أي ملفات.
+            <p class="apk-warning animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="600">
+                <i class="bi bi-info-circle-fill me-2"></i><strong>تنبيه:</strong> يمكنك اللعب فوراً من المتصفح عبر زر "العب الآن" دون الحاجة لتثبيت أي ملفات.
             </p>
         </div>
     </header>
 
-    <section class="features-section py-5">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">لماذا تحدي الأبطال؟</h2>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">لماذا تحدي الأبطال؟</h2>
+                <p class="section-subtitle">استمتع بتجربة لعب فريدة تجمع بين التحدي والمتعة والمعرفة</p>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-item">
                         <i class="bi bi-controller"></i>
                         <h3>تنوع في الألعاب</h3>
                         <p>استمتع بأنماط لعب متعددة: "من اللاعب؟"، "توقع التشكيلة"، "أسئلة ريسك"، والمزيد من التحديات التي يتم تحديثها أسبوعياً.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-item">
                         <i class="bi bi-people-fill"></i>
                         <h3>لعب جماعي أونلاين</h3>
                         <p>نظام Matchmaking ذكي يضعك في مواجهة خصوم من مستواك، أو أنشئ غرفة خاصة والعب ضد أصدقائك مباشرة.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-item">
-                        <i class="bi bi-trophy-fill"></i> <h3>تصدر القائمة</h3>
+                        <i class="bi bi-trophy-fill"></i>
+                        <h3>تصدر القائمة</h3>
                         <p>اجمع النقاط من الفوز في المباريات لتصعد في سلم الترتيب العالمي (Leaderboard) وتحصل على ألقاب وميداليات حصرية.</p>
                     </div>
                 </div>
@@ -313,17 +777,18 @@
         </div>
     </section>
 
-    <section class="game-guide-section py-5 bg-light">
+    <!-- Game Guide Section -->
+    <section class="game-guide-section bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">دليل اللاعب المحترف</h2>
-                <p class="text-muted">كل ما تحتاج معرفته عن أنظمة اللعب، احتساب النقاط، والترقي في المستويات</p>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">دليل اللاعب المحترف</h2>
+                <p class="section-subtitle">كل ما تحتاج معرفته عن أنظمة اللعب، احتساب النقاط، والترقي في المستويات</p>
             </div>
 
             <div class="row">
-                <div class="col-lg-6 mb-4">
+                <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="100">
                     <div class="card h-100 border-0 shadow-sm p-4">
-                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-bar-chart-line-fill"></i> نظام التصنيف (Ranking)</h3>
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-bar-chart-line-fill me-2"></i> نظام التصنيف (Ranking)</h3>
                         <p>تعتمد لعبة "تحدي الأبطال" على خوارزمية متقدمة لتقييم المهارة. يبدأ جميع اللاعبين بتصنيف 1000 نقطة. عند الفوز، تكتسب نقاطاً بناءً على قوة الخصم:</p>
                         <ul>
                             <li><strong>الفوز على خصم قوي:</strong> يمنحك نقاطاً مضاعفة (+25 نقطة أو أكثر).</li>
@@ -332,9 +797,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
+                <div class="col-lg-6 mb-4" data-aos="fade-left" data-aos-delay="200">
                     <div class="card h-100 border-0 shadow-sm p-4">
-                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-cpu-fill"></i> المتطلبات التقنية</h3>
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-cpu-fill me-2"></i> المتطلبات التقنية</h3>
                         <p>تم تطوير اللعبة لتعمل بكفاءة وسرعة على جميع الأجهزة:</p>
                         <ul>
                             <li><strong>متصفحات الويب:</strong> Chrome, Firefox, Safari (الإصدارات الحديثة).</li>
@@ -347,146 +812,147 @@
         </div>
     </section>
 
-    <section class="rules-section py-5 bg-white">
+    <!-- Game Modes Section -->
+    <section class="rules-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge bg-primary px-3 py-2 mb-2 rounded-pill">قوانين اللعب</span>
-                <h2 class="fw-bold">اكتشف 7 أنماط لعب مختلفة</h2>
-                <p class="text-muted" style="max-width: 700px; margin: 0 auto;">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-primary px-4 py-2 mb-3 rounded-pill fs-6">قوانين اللعب</span>
+                <h2 class="section-title">اكتشف 7 أنماط لعب مختلفة</h2>
+                <p class="section-subtitle">
                     تحدي الأبطال ليست مجرد لعبة واحدة، بل هي مجموعة متكاملة من التحديات التي تختبر كل جوانب ثقافتك الكروية. إليك الدليل الرسمي لقوانين كل لعبة:
                 </p>
             </div>
 
             <div class="row g-4 justify-content-center">
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">1. تحدي ريسك</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #dc3545, #ff6b6b);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-grid-3x3-gap-fill game-mode-icon"></i>
+                                <h3 class="game-mode-title">1. تحدي ريسك</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 مواجهة استراتيجية تتكون من <strong>4 فئات (Categories)</strong>، كل فئة تحتوي على 4 مستويات صعوبة (إجمالي 16 سؤال).
                             </p>
-                            <div class="alert alert-light border-start border-4 border-danger py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> النقاط تتصاعد حسب الصعوبة (5، 10، 20، 40). الإجابة الخاطئة لا تخصم نقاطاً. استخدم وسائل المساعدة بذكاء (سرقة السؤال، إظهار الاختيارات، تزويد الوقت) لحسم المنافسة.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> النقاط تتصاعد حسب الصعوبة (5، 10، 20، 40). الإجابة الخاطئة لا تخصم نقاطاً. استخدم وسائل المساعدة بذكاء (سرقة السؤال، إظهار الاختيارات، تزويد الوقت) لحسم المنافسة.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-person-bounding-box fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">2. خمن اللاعب؟</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #0056b3, #4285F4);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-person-bounding-box game-mode-icon"></i>
+                                <h3 class="game-mode-title">2. خمن اللاعب؟</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 لعبة ذكاء تفاعلية. لديك لاعب سري وخصمك لديه لاعب سري.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-primary py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> اطرح أسئلة ذكية (مثلاً: هل يلعب في الدوري الإنجليزي؟) لاستبعاد الخيارات. أول من يكتشف لاعب الخصم يفوز.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> اطرح أسئلة ذكية (مثلاً: هل يلعب في الدوري الإنجليزي؟) لاستبعاد الخيارات. أول من يكتشف لاعب الخصم يفوز.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-life-preserver fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">3. اهبد صح</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #fd7e14, #ffa36c);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-life-preserver game-mode-icon"></i>
+                                <h3 class="game-mode-title">3. اهبد صح</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 تحدي التقدير الرقمي. لا نطلب منك الرقم الدقيق، بل أقرب رقم صحيح.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-warning py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> في أسئلة مثل "كم عدد أهداف ميسي؟"، اللاعب الذي يكتب الرقم الأقرب للإجابة الصحيحة هو من يكسب الجولة.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> في أسئلة مثل "كم عدد أهداف ميسي؟"، اللاعب الذي يكتب الرقم الأقرب للإجابة الصحيحة هو من يكسب الجولة.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-wallet2 fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">4. تحدي البنك</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #198754, #00BFA5);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-wallet2 game-mode-icon"></i>
+                                <h3 class="game-mode-title">4. تحدي البنك</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 لعبة استراتيجية وإدارة مخاطر. كل إجابة صحيحة تزيد رصيدك المؤقت.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-success py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> يجب أن تضغط زر "بنك" لتثبيت نقاطك قبل انتهاء الوقت أو قبل الإجابة بالخطأ، وإلا ستفقد الرصيد المتراكم.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> يجب أن تضغط زر "بنك" لتثبيت نقاطك قبل انتهاء الوقت أو قبل الإجابة بالخطأ، وإلا ستفقد الرصيد المتراكم.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-eye-slash-fill fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">5. أنا مين؟</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #0dcaf0, #00D4B4);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-eye-slash-fill game-mode-icon"></i>
+                                <h3 class="game-mode-title">5. أنا مين؟</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 لغز الشخصية الغامضة. نعطيك 5 أوصاف متدرجة من الصعب جداً إلى السهل.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-info py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> المعرفة المبكرة تساوي نقاطاً أكثر. إذا عرفت اللاعب من الوصف الأول تربح 100 نقطة، ومن الوصف الأخير 20 نقطة فقط.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> المعرفة المبكرة تساوي نقاطاً أكثر. إذا عرفت اللاعب من الوصف الأول تربح 100 نقطة، ومن الوصف الأخير 20 نقطة فقط.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-list-ol fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">6. قائمة Top 10</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #6c757d, #868e96);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-list-ol game-mode-icon"></i>
+                                <h3 class="game-mode-title">6. قائمة Top 10</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 هل تعرف ترتيب الهدافين أو الأكثر مشاركة؟ عليك ملء القائمة بالترتيب.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-secondary py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> خمن العناصر الموجودة في القائمة. المراكز الدنيا (الصعبة) تمنحك نقاطاً أعلى من المراكز الأولى المعروفة.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> خمن العناصر الموجودة في القائمة. المراكز الدنيا (الصعبة) تمنحك نقاطاً أعلى من المراكز الأولى المعروفة.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border border-light shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                    <i class="bi bi-camera-fill fs-4"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-0">7. مين في الصورة؟</h3>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="game-mode-card">
+                        <div class="game-mode-header" style="background: linear-gradient(45deg, #212529, #343a40);">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-camera-fill game-mode-icon"></i>
+                                <h3 class="game-mode-title">7. مين في الصورة؟</h3>
                             </div>
-                            <p class="text-secondary small">
+                        </div>
+                        <div class="game-mode-body">
+                            <p class="game-mode-description">
                                 اختبر معرفتك بالفرق. ستظهر لك <strong>الصورة الجماعية الرسمية للفريق (Squad Photo)</strong> قبل بداية المباراة.
                             </p>
-                            <div class="alert alert-light border-start border-4 border-dark py-2" role="alert">
-                                <small><strong>🏆 قانون الفوز:</strong> انظر للصورة جيداً، وتعرف على وجوه اللاعبين في التشكيلة، ثم اكتب أسماءهم بشكل صحيح.</small>
+                            <div class="game-mode-rule">
+                                <strong>🏆 قانون الفوز:</strong> انظر للصورة جيداً، وتعرف على وجوه اللاعبين في التشكيلة، ثم اكتب أسماءهم بشكل صحيح.
                             </div>
                         </div>
                     </div>
@@ -496,11 +962,11 @@
         </div>
     </section>
 
-    <!-- قسم المدونة المضافة -->
+    <!-- Blog Section -->
     <section class="blog-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
                     <div class="blog-card">
                         <h3><i class="bi bi-journal-text me-2"></i>مدونة تحدي الأبطال</h3>
                         <p>اقرأ مقالاتنا الشاملة عن كرة القدم لتطوير معرفتك والتفوق في اللعبة. موسوعة كاملة عن الدوريات الخمسة الكبرى، الهدافين التاريخيين، المدربين الأساطير، والتكتيكات الكروية.</p>
@@ -513,16 +979,16 @@
         </div>
     </section>
 
-    <!-- قسم الأسئلة الشائعة المضافة -->
-    <section class="faq-section">
+    <!-- FAQ Section -->
+    <section class="faq-section bg-light">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">الأسئلة الشائعة</h2>
-            <p class="text-center text-muted mb-5">إجابات على أكثر الأسئلة شيوعاً من اللاعبين</p>
+            <h2 class="text-center fw-bold mb-4 section-title" data-aos="fade-up">الأسئلة الشائعة</h2>
+            <p class="text-center text-muted mb-5 section-subtitle" data-aos="fade-up" data-aos-delay="100">إجابات على أكثر الأسئلة شيوعاً من اللاعبين</p>
             
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="faq-container">
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="faq-question" onclick="toggleFaq(this)">
                                 <span>هل اللعبة مجانية حقاً؟</span>
                                 <i class="bi bi-chevron-down faq-icon"></i>
@@ -532,13 +998,13 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
                             <div class="faq-question" onclick="toggleFaq(this)">
                                 <span>كيف يمكنني تحسين ترتيبي في اللعبة؟</span>
                                 <i class="bi bi-chevron-down faq-icon"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>يمكنك تحسين ترتيبك من خلال:
+                                <p>يمكنك تحسين ترتيبك من خلال:</p>
                                 <ul>
                                     <li>الفوز في المباريات ضد خصوم ذوي تصنيف عالٍ</li>
                                     <li>اللعب بانتظام للحفاظ على نشاط حسابك</li>
@@ -546,11 +1012,10 @@
                                     <li>التحدي في جميع أنماط اللعب المختلفة</li>
                                     <li>قراءة مقالات المدونة لتحسين معرفتك الكروية</li>
                                 </ul>
-                                </p>
                             </div>
                         </div>
                         
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="faq-question" onclick="toggleFaq(this)">
                                 <span>هل يمكنني اللعب مع أصدقائي؟</span>
                                 <i class="bi bi-chevron-down faq-icon"></i>
@@ -560,39 +1025,37 @@
                             </div>
                         </div>
                         
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
                             <div class="faq-question" onclick="toggleFaq(this)">
                                 <span>كيف يتم تحديث الأسئلة في اللعبة؟</span>
                                 <i class="bi bi-chevron-down faq-icon"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>نقوم بتحديث قاعدة أسئلة اللعبة أسبوعياً لضمان:
+                                <p>نقوم بتحديث قاعدة أسئلة اللعبة أسبوعياً لضمان:</p>
                                 <ul>
                                     <li>إضافة أحدث المعلومات عن المباريات واللاعبين</li>
                                     <li>تنويع الأسئلة لتشمل جميع جوانب كرة القدم</li>
                                     <li>تصحيح أي معلومات قديمة أو غير دقيقة</li>
                                     <li>إضافة أسئلة موسمية متعلقة بالبطولات الجارية</li>
                                 </ul>
-                                قاعدة بياناتنا تحتوي على أكثر من 10,000 سؤال متنوع.
-                                </p>
+                                <p>قاعدة بياناتنا تحتوي على أكثر من 10,000 سؤال متنوع.</p>
                             </div>
                         </div>
                         
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                             <div class="faq-question" onclick="toggleFaq(this)">
                                 <span>ما هي متطلبات تشغيل اللعبة؟</span>
                                 <i class="bi bi-chevron-down faq-icon"></i>
                             </div>
                             <div class="faq-answer">
-                                <p>متطلبات تشغيل اللعبة بسيطة:
+                                <p>متطلبات تشغيل اللعبة بسيطة:</p>
                                 <ul>
                                     <li>متصفح ويب حديث (Chrome، Firefox، Safari، Edge)</li>
                                     <li>اتصال إنترنت مستقر (للعب الأونلاين)</li>
                                     <li>جهاز مع دعم JavaScript</li>
                                     <li>للإصدارات المحمولة: Android 5.0+ أو iOS 11.0+</li>
                                 </ul>
-                                يمكنك اللعب مباشرة من المتصفح دون الحاجة لتحميل أي تطبيق.
-                                </p>
+                                <p>يمكنك اللعب مباشرة من المتصفح دون الحاجة لتحميل أي تطبيق.</p>
                             </div>
                         </div>
                     </div>
@@ -601,18 +1064,19 @@
         </div>
     </section>
 
-    <section class="screenshots-section py-5 bg-light">
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
         <div class="container">
-            <h2 class="mb-5 text-center fw-bold">لقطات من داخل اللعبة</h2>
+            <h2 class="mb-5 text-center fw-bold section-title" data-aos="fade-up">لقطات من داخل اللعبة</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-10 col-md-12">
+                    <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
                                 <img src="screenshot1.jpg" class="d-block w-100" alt="لقطة شاشة 1">
                             </div>
@@ -624,11 +1088,11 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="prev">
-                            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="next">
-                            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -637,8 +1101,10 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="footer-brand">تحدي الأبطال</div>
             <div class="footer-links">
                 <a href="privacy.html">سياسة الخصوصية</a>
                 <a href="terms.html">شروط الاستخدام</a>
@@ -653,9 +1119,19 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
     <script>
+        // تهيئة AOS للرسوم المتحركة عند التمرير
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true,
+            easing: 'ease-out'
+        });
+        
         // وظيفة الأسئلة الشائعة
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -675,6 +1151,84 @@
                 icon.classList.add('rotated');
             }
         }
+        
+        // إنشاء الجسيمات المتحركة في الخلفية
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+            
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                const startX = Math.random() * 100;
+                particle.style.left = `${startX}%`;
+                
+                const animationDuration = Math.random() * 20 + 15;
+                particle.style.animationDuration = `${animationDuration}s`;
+                
+                const animationDelay = Math.random() * 5;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // تحريك أشرطة التقدم عند ظهورها
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                if (width) {
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 300);
+                }
+            });
+        }
+        
+        // تهيئة عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            animateProgressBars();
+            
+            // إضافة تأثير للمارة على البطاقات
+            const cards = document.querySelectorAll('.feature-item, .game-mode-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = this.style.transform + ' scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = this.style.transform.replace(' scale(1.02)', '');
+                });
+            });
+        });
+        
+        // إضافة تأثير التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
