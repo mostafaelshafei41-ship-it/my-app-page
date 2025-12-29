@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4803557644630676"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الموسوعة الشاملة للدوريات الخمسة الكبرى في كرة القدم: تاريخ، إحصائيات، أندية، لاعبين، وكل المعلومات الحديثة">
+    <meta name="keywords" content="الدوري الإنجليزي, الدوري الإسباني, الدوري الإيطالي, الدوري الألماني, الدوري الفرنسي, كرة القدم, إحصائيات, أندية, لاعبين">
+    <title>موسوعة تحدي الأبطال - الدوريات الخمسة الكبرى (الإصدار الموسع)</title>
+
+    <!-- مكتبات CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-dark: #0a1931;
+            --secondary-dark: #1c1c3b;
+            --accent-blue: #185adb;
+            --accent-red: #ff304f;
+            --accent-green: #00b894;
+            --accent-yellow: #ffd32a;
+            --accent-purple: #6c5ce7;
+            --text-primary: #333;
+            --text-secondary: #555;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --gradient-premier: linear-gradient(135deg, #3d195b, #8b0000);
+            --gradient-laliga: linear-gradient(135deg, #004d98, #a50044);
+            --gradient-seriea: linear-gradient(135deg, #009246, #8b4513);
+            --gradient-bundesliga: linear-gradient(135deg, #d8011c, #000000);
+            --gradient-ligue1: linear-gradient(135deg, #0c1e3e, #da291c);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+        }
+
+        /* تحسينات الشريط العلوي */
+        .navbar {
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary-dark)) !important;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(10, 25, 49, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #ffd32a, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin: 0 5px;
+            padding: 8px 15px !important;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:not(.active):hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, var(--accent-yellow), #ff9500);
+            color: var(--primary-dark) !important;
+            box-shadow: 0 4px 12px rgba(255, 211, 42, 0.3);
+        }
+
+        /* الهيدر الرئيسي */
+        .blog-header {
+            background: linear-gradient(rgba(10, 25, 49, 0.85), rgba(28, 28, 59, 0.9)), url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .blog-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #ffd32a, #ff9500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInDown 1s ease;
+        }
+
+        .blog-header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        /* تخصيص الكروت الخاصة بكل دوري */
+        .league-card {
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s ease;
+            background: var(--bg-white);
+            border: none;
+            position: relative;
+        }
+
+        .league-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .league-header {
+            padding: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .league-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .league-header.premier {
+            background: var(--gradient-premier);
+        }
+
+        .league-header.laliga {
+            background: var(--gradient-laliga);
+        }
+
+        .league-header.seriea {
+            background: var(--gradient-seriea);
+        }
+
+        .league-header.bundesliga {
+            background: var(--gradient-bundesliga);
+        }
+
+        .league-header.ligue1 {
+            background: var(--gradient-ligue1);
+        }
+
+        .league-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .league-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .league-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .league-content {
+            padding: 35px;
+        }
+
+        /* تحسينات للعناوين */
+        .section-title {
+            color: var(--primary-dark);
+            font-weight: 900;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            position: relative;
+            font-size: 1.8rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 5px;
+            border-radius: 3px;
+        }
+
+        .section-title.premier::after {
+            background: linear-gradient(to right, #3d195b, #8b0000);
+        }
+
+        .section-title.laliga::after {
+            background: linear-gradient(to right, #004d98, #a50044);
+        }
+
+        .section-title.seriea::after {
+            background: linear-gradient(to right, #009246, #8b4513);
+        }
+
+        .section-title.bundesliga::after {
+            background: linear-gradient(to right, #d8011c, #000000);
+        }
+
+        .section-title.ligue1::after {
+            background: linear-gradient(to right, #0c1e3e, #da291c);
+        }
+
+        /* الجداول المحسنة */
+        .stats-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .stats-table thead {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+        }
+
+        .stats-table th {
+            color: white;
+            font-weight: 700;
+            padding: 18px 15px;
+            text-align: center;
+            border: none;
+        }
+
+        .stats-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .stats-table tbody tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .stats-table tbody tr:hover {
+            background-color: rgba(24, 90, 219, 0.08);
+            transform: scale(1.01);
+        }
+
+        .stats-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+        }
+
+        /* الشريط الجانبي */
+        .sidebar-sticky {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .sidebar-card-header {
+            padding: 20px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .card-premier {
+            background: linear-gradient(135deg, #3d195b, #8b0000);
+        }
+
+        .card-laliga {
+            background: linear-gradient(135deg, #004d98, #a50044);
+        }
+
+        .card-seriea {
+            background: linear-gradient(135deg, #009246, #8b4513);
+        }
+
+        .card-bundesliga {
+            background: linear-gradient(135deg, #d8011c, #000000);
+        }
+
+        .card-ligue1 {
+            background: linear-gradient(135deg, #0c1e3e, #da291c);
+        }
+
+        .sidebar-card-body {
+            padding: 20px;
+        }
+
+        /* الأزرار المحسنة */
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border: none;
+            color: white;
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+            color: white;
+        }
+
+        .btn-premier {
+            background: linear-gradient(135deg, #3d195b, #8b0000);
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+        }
+
+        .btn-premier:hover {
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.4);
+        }
+
+        /* رقائق التصنيف */
+        .badge-custom {
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .badge-premier {
+            background: linear-gradient(135deg, #3d195b, #8b0000);
+            color: white;
+        }
+
+        .badge-laliga {
+            background: linear-gradient(135deg, #004d98, #a50044);
+            color: white;
+        }
+
+        .badge-seriea {
+            background: linear-gradient(135deg, #009246, #8b4513);
+            color: white;
+        }
+
+        .badge-bundesliga {
+            background: linear-gradient(135deg, #d8011c, #000000);
+            color: white;
+        }
+
+        .badge-ligue1 {
+            background: linear-gradient(135deg, #0c1e3e, #da291c);
+            color: white;
+        }
+
+        /* التذييل */
+        footer {
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary-dark));
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-yellow);
+            padding-right: 5px;
+        }
+
+        /* تحسينات للجوّال */
+        @media (max-width: 992px) {
+            .blog-header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .league-title {
+                font-size: 1.8rem;
+            }
+            
+            .navbar-nav {
+                background: rgba(10, 25, 49, 0.95);
+                padding: 15px;
+                border-radius: 15px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-header {
+                padding: 140px 0 70px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .blog-header p {
+                font-size: 1.1rem;
+            }
+            
+            .league-content {
+                padding: 25px;
+            }
+        }
+
+        /* رسوم متحركة */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        /* شريط التقدم */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 9999;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* زر العودة للأعلى */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
+            z-index: 100;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.6);
+        }
+
+        /* نظام علامات التبويب */
+        .nav-tabs-custom {
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .nav-tabs-custom .nav-link {
+            border: none;
+            color: var(--text-secondary);
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 10px 10px 0 0;
+            margin-left: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tabs-custom .nav-link:hover {
+            color: var(--accent-blue);
+            background-color: rgba(24, 90, 219, 0.05);
+        }
+
+        .nav-tabs-custom .nav-link.active {
+            color: white;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border: none;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+        }
+
+        /* علامات المعلومات */
+        .info-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-right: 5px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-card.premier {
+            border-right-color: #3d195b;
+        }
+
+        .info-card.laliga {
+            border-right-color: #004d98;
+        }
+
+        .info-card.seriea {
+            border-right-color: #009246;
+        }
+
+        .info-card.bundesliga {
+            border-right-color: #d8011c;
+        }
+
+        .info-card.ligue1 {
+            border-right-color: #0c1e3e;
+        }
+
+        .player-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--accent-blue);
+            transition: all 0.3s ease;
+        }
+
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-name {
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+
+        .player-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- زر العودة للأعلى -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-trophy me-2"></i>تحدي الأبطال
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i>الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#premier-league"><i class="fas fa-futbol me-1"></i>الدوري الإنجليزي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#la-liga"><i class="fas fa-flag me-1"></i>الدوري الإسباني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#serie-a"><i class="fas fa-italic me-1"></i>الدوري الإيطالي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bundesliga"><i class="fas fa-mountain me-1"></i>الدوري الألماني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ligue-1"><i class="fas fa-tower-eiffel me-1"></i>الدوري الفرنسي</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="blog-header" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="animate__animated animate__fadeInDown">موسوعة الدوريات الخمسة الكبرى</h1>
+                    <p class="animate__animated animate__fadeInUp">أكبر مصدر شامل للمعلومات عن دوريات كرة القدم الخمسة الكبرى: إحصائيات حديثة، تاريخ مفصل، أندية، لاعبين، مدربين، وسجلات قياسية. تم تحديث جميع البيانات حتى 2025.</p>
+                    <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        <a href="#premier-league" class="btn btn-gradient btn-lg me-3"><i class="fas fa-play-circle me-2"></i>ابدأ الرحلة</a>
+                        <a href="#comparison" class="btn btn-outline-light btn-lg"><i class="fas fa-chart-bar me-2"></i>مقارنة الدوريات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- الدوري الإنجليزي - إضافة معلومات موسعة -->
+                <article id="premier-league" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header premier">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="league-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h2 class="league-title">الدوري الإنجليزي الممتاز</h2>
+                                <p class="league-subtitle">أقوى دوري في العالم من حيث الشعبية والقيمة التسويقية</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">32</h4>
+                                    <p>موسمًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">20</h4>
+                                    <p>فريقًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">7</h4>
+                                    <p>فرق فازت باللقب</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">260</h4>
+                                    <p>هدف لآلان شيرر</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title premier">نظرة شاملة</h3>
+                        <p>الدوري الإنجليزي الممتاز (Premier League) هو بطولة كرة القدم للقسم الأول في إنجلترا، وقد تأسس في 20 فبراير 1992. يعتبر حاليًا أقوى دوري في العالم من حيث الشعبية والقيمة التسويقية، حيث يصل إجمالي قيمة عقود البث التلفزيوني إلى 10 مليارات جنيه إسترليني لموسم 2023-2026.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h4 class="mb-3"><i class="fas fa-history me-2"></i>المحطات التاريخية</h4>
+                                <ul class="timeline">
+                                    <li><strong>1992:</strong> تأسيس البريميرليج مع 22 فريقًا</li>
+                                    <li><strong>1995:</strong> تقليص عدد الفرق إلى 20 فريقًا</li>
+                                    <li><strong>2004:</strong> أرسنال يكمل موسمًا كاملًا بدون هزيمة (The Invincibles)</li>
+                                    <li><strong>2012:</strong> أغرب نهاية للدوري مع هدف سيرخيو أغويرو في الدقيقة 93:20</li>
+                                    <li><strong>2016:</strong> ليستر سيتي يفوز باللقب كأكبر مفاجأة في تاريخ كرة القدم</li>
+                                    <li><strong>2019:</strong> ليفربول يحقق 97 نقطة ولا يفوز باللقب (رقم قياسي)</li>
+                                    <li><strong>2023:</strong> مانشستر سيتي يحقق الثلاثية المحلية تحت قيادة بيب غوارديولا</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="mb-3"><i class="fas fa-trophy me-2"></i>الألقاب الحديثة</h4>
+                                <ul class="timeline">
+                                    <li><strong>2024:</strong> مانشستر سيتي (اللقب الرابع على التوالي)</li>
+                                    <li><strong>2023:</strong> مانشستر سيتي</li>
+                                    <li><strong>2022:</strong> مانشستر سيتي</li>
+                                    <li><strong>2021:</strong> مانشستر سيتي</li>
+                                    <li><strong>2020:</strong> ليفربول (أول لقب بعد 30 عامًا)</li>
+                                    <li><strong>2019:</strong> مانشستر سيتي (98 نقطة)</li>
+                                    <li><strong>2018:</strong> مانشستر سيتي (100 نقطة - رقم قياسي)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">أبرز الأندية والملاعب</h4>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>النادي</th>
+                                    <th>عدد الألقاب</th>
+                                    <th>أول لقب</th>
+                                    <th>آخر لقب</th>
+                                    <th>السعة</th>
+                                    <th>القيمة السوقية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>مانشستر يونايتد</strong></td>
+                                    <td>20</td>
+                                    <td>1908</td>
+                                    <td>2013</td>
+                                    <td>74,140</td>
+                                    <td>5.8B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ليفربول</strong></td>
+                                    <td>19</td>
+                                    <td>1901</td>
+                                    <td>2020</td>
+                                    <td>54,074</td>
+                                    <td>4.7B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>أرسنال</strong></td>
+                                    <td>13</td>
+                                    <td>1931</td>
+                                    <td>2004</td>
+                                    <td>60,704</td>
+                                    <td>4.2B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>مانشستر سيتي</strong></td>
+                                    <td>9</td>
+                                    <td>1937</td>
+                                    <td>2024</td>
+                                    <td>53,400</td>
+                                    <td>6.0B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تشيلسي</strong></td>
+                                    <td>6</td>
+                                    <td>1955</td>
+                                    <td>2017</td>
+                                    <td>40,343</td>
+                                    <td>4.0B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>توتنهام هوتسبير</strong></td>
+                                    <td>2</td>
+                                    <td>1951</td>
+                                    <td>1961</td>
+                                    <td>62,850</td>
+                                    <td>3.2B €</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ليستر سيتي</strong></td>
+                                    <td>1</td>
+                                    <td>2016</td>
+                                    <td>2016</td>
+                                    <td>32,261</td>
+                                    <td>450M €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-5">الهدافون التاريخيون في البريميرليج</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="player-card">
+                                    <div class="player-name">آلان شيرر</div>
+                                    <div class="text-muted">بلاكبيرن روفرز / نيوكاسل يونايتد</div>
+                                    <div class="player-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">260</div>
+                                            <div class="stat-label">هدف</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">441</div>
+                                            <div class="stat-label">مباراة</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">0.59</div>
+                                            <div class="stat-label">هدف/مباراة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="player-card">
+                                    <div class="player-name">هاري كين</div>
+                                    <div class="text-muted">توتنهام هوتسبير</div>
+                                    <div class="player-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">213</div>
+                                            <div class="stat-label">هدف</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">320</div>
+                                            <div class="stat-label">مباراة</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">0.67</div>
+                                            <div class="stat-label">هدف/مباراة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>سيرخيو أغويرو</h6>
+                                    <p class="mb-1">184 هدف في 275 مباراة</p>
+                                    <small>0.67 هدف/مباراة</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>أندي كول</h6>
+                                    <p class="mb-1">187 هدف في 414 مباراة</p>
+                                    <small>0.45 هدف/مباراة</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>واين روني</h6>
+                                    <p class="mb-1">208 أهداف في 491 مباراة</p>
+                                    <small>0.42 هدف/مباراة</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">السجلات القياسية في البريميرليج</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>أرقام قياسية للأندية:</h5>
+                                <ul>
+                                    <li><strong>أكبر فوز:</strong> 9-0 (مانشستر يونايتد vs إيبسويتش 1995، وساوثهامبتون 2021)</li>
+                                    <li><strong>أطول سلسلة انتصارات:</strong> 18 فوزًا (مانشستر سيتي 2017-18)</li>
+                                    <li><strong>أطول سلسلة بدون هزيمة:</strong> 49 مباراة (أرسنال 2003-2004)</li>
+                                    <li><strong>أكبر عدد من النقاط:</strong> 100 نقطة (مانشستر سيتي 2017-18)</li>
+                                    <li><strong>أكبر عدد من الأهداف في موسم:</strong> 106 هدف (مانشستر سيتي 2017-18)</li>
+                                    <li><strong>أكبر فرق نقاط عن المركز الثاني:</strong> 19 نقطة (مانشستر سيتي 2017-18)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>أرقام قياسية للاعبين:</h5>
+                                <ul>
+                                    <li><strong>أكثر لاعب مشاركة:</strong> غاريث باري (653 مباراة)</li>
+                                    <li><strong>أكثر حارس نظافة شباك:</strong> بيتر تشيك (202 مباراة)</li>
+                                    <li><strong>أكثر لاعب صناعة أهداف:</strong> ريان جيجز (162 تمريرة حاسمة)</li>
+                                    <li><strong>أسرع هاتريك:</strong> سعد الحريصي (2 دقيقة و56 ثانية)</li>
+                                    <li><strong>أكثر لاعب حصولاً على جائزة الأفضل:</strong> تييري هنري (4 مرات)</li>
+                                    <li><strong>أكبر عدد من الهاتريك في موسم:</strong> آلان شيرر (5 هاتريك في 1995-96)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">المدربون الأكثر نجاحًا</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>السير أليكس فيرجسون</h6>
+                                    <p class="mb-0">13 لقب مع مانشستر يونايتد</p>
+                                    <small>1986-2013</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>بيب غوارديولا</h6>
+                                    <p class="mb-0">6 ألقاب مع مانشستر سيتي</p>
+                                    <small>2016-حتى الآن</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card premier">
+                                    <h6>أرسين فينغر</h6>
+                                    <p class="mb-0">3 ألقاب مع أرسنال</p>
+                                    <small>1996-2018</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- الدوري الإسباني - معلومات موسعة -->
+                <article id="la-liga" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header laliga">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="league-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h2 class="league-title">الدوري الإسباني</h2>
+                                <p class="league-subtitle">دوري التكتيك الفني والمهارات العالية وأقوى منافسة ثنائية في العالم</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">94</h4>
+                                    <p>موسمًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">20</h4>
+                                    <p>فريقًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">9</h4>
+                                    <p>فرق فازت باللقب</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">474</h4>
+                                    <p>هدف لليونيل ميسي</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title laliga">التاريخ والنشأة</h3>
+                        <p>تأسس الدوري الإسباني (La Liga) في عام 1929 بمشاركة 10 فرق. أول بطولة فاز بها برشلونة، وكان هدافها الأول هو الإسباني غاسبار روبيو برصيد 14 هدفًا. شهد الدوري تطورات كبيرة على مر السنين، حيث وصل عدد الفرق إلى 20 فريقًا في موسم 1997-1998.</p>
+                        
+                        <h4 class="mt-4">تطور نظام الدوري</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><strong>1929-1934:</strong> 10 فرق</li>
+                                    <li><strong>1934-1941:</strong> 12 فريقًا</li>
+                                    <li><strong>1941-1950:</strong> 14 فريقًا</li>
+                                    <li><strong>1950-1971:</strong> 16 فريقًا</li>
+                                    <li><strong>1971-1987:</strong> 18 فريقًا</li>
+                                    <li><strong>1987-1995:</strong> 20 فريقًا</li>
+                                    <li><strong>1995-1997:</strong> 22 فريقًا</li>
+                                    <li><strong>1997-حتى الآن:</strong> 20 فريقًا</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card laliga">
+                                    <h5><i class="fas fa-info-circle me-2"></i>معلومة تاريخية</h5>
+                                    <p class="mb-0">ريال مدريد لم يهبط أبدًا إلى الدرجة الثانية منذ تأسيس الدوري، وهو الوحيد مع برشلونة وأتلتيك بيلباو الذين حافظوا على هذا الإنجاز.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">إحصائيات الفريقين العظماء</h4>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>الإحصائيات</th>
+                                    <th>ريال مدريد</th>
+                                    <th>برشلونة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>عدد الألقاب</strong></td>
+                                    <td>36</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوصافة</strong></td>
+                                    <td>25</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>إجمالي النقاط (كل الوقت)</strong></td>
+                                    <td>4,987</td>
+                                    <td>4,912</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>متوسط النقاط/موسم</strong></td>
+                                    <td>68.3</td>
+                                    <td>67.3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>عدد الانتصارات</strong></td>
+                                    <td>1,759</td>
+                                    <td>1,726</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>عدد التعادلات</strong></td>
+                                    <td>552</td>
+                                    <td>560</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>عدد الهزائم</strong></td>
+                                    <td>581</td>
+                                    <td>606</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-5">قائمة الهدافين التاريخيين</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ol>
+                                    <li><strong>ليونيل ميسي</strong> - 474 هدفًا (520 مباراة)</li>
+                                    <li><strong>كريستيانو رونالدو</strong> - 311 هدفًا (292 مباراة)</li>
+                                    <li><strong>تيلو مورينو</strong> - 251 هدفًا (277 مباراة)</li>
+                                    <li><strong>كارلوس سانتيلانا</strong> - 234 هدفًا (643 مباراة)</li>
+                                    <li><strong>ألفريدو دي ستيفانو</strong> - 227 هدفًا (329 مباراة)</li>
+                                    <li><strong>هيغويريتا</strong> - 219 هدفًا (441 مباراة)</li>
+                                    <li><strong>راؤول غونزاليس</strong> - 228 هدفًا (550 مباراة)</li>
+                                    <li><strong>سيزار رودريغيز</strong> - 223 هدفًا (353 مباراة)</li>
+                                    <li><strong>كريستوفر أوبيانغ</strong> - 219 هدفًا (443 مباراة)</li>
+                                    <li><strong>كارلوس أروتشو</strong> - 210 أهداف (288 مباراة)</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card laliga">
+                                    <h5>الأرقام القياسية للاعبين</h5>
+                                    <ul class="mb-0">
+                                        <li><strong>أكثر لاعب مشاركة:</strong> أندوني زوبيزاريتا (622 مباراة)</li>
+                                        <li><strong>أكثر حارس نظافة شباك:</strong> أندوني زوبيزاريتا (235 مباراة)</li>
+                                        <li><strong>أسرع هاتريك:</strong> كريستيانو رونالدو (8 دقائق)</li>
+                                        <li><strong>أكبر عدد من الهاتريك في موسم:</strong> كريستيانو رونالدو (8 هاتريك في 2014-15)</li>
+                                        <li><strong>أصغر لاعب يسجل:</strong> فابريسيو أوبرتو (15 سنة و255 يومًا)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">سجلات قياسية للأندية</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>سجلات إيجابية:</h5>
+                                <ul>
+                                    <li><strong>أكبر فوز:</strong> 12-1 (أتلتيك بيلباو ضد برشلونة 1931)</li>
+                                    <li><strong>أطول سلسلة انتصارات:</strong> 16 فوزًا (برشلونة 2010-11، ريال مدريد 2016-17)</li>
+                                    <li><strong>أطول سلسلة بدون هزيمة:</strong> 43 مباراة (برشلونة 2017-18)</li>
+                                    <li><strong>أكبر عدد من النقاط:</strong> 100 نقطة (ريال مدريد 2011-12، برشلونة 2012-13)</li>
+                                    <li><strong>أكبر عدد من الأهداف في موسم:</strong> 121 هدف (ريال مدريد 2011-12)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>سجلات سلبية:</h5>
+                                <ul>
+                                    <li><strong>أكبر عدد من الهزائم في موسم:</strong> 30 هزيمة (لوجرونييس 1993-94)</li>
+                                    <li><strong>أقل عدد من النقاط في موسم:</strong> 13 نقطة (سبورتينغ خيخون 1997-98)</li>
+                                    <li><strong>أقل عدد من الأهداف في موسم:</strong> 18 هدف (سبورتينغ خيخون 1997-98)</li>
+                                    <li><strong>أكبر عدد من الأهداف المسجلة عليه:</strong> 134 هدف (لوجرونييس 1993-94)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">ملخص ألقاب آخر 10 مواسم</h4>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>الموسم</th>
+                                    <th>البطل</th>
+                                    <th>النقاط</th>
+                                    <th>الوصيف</th>
+                                    <th>الفرق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>2023-24</td><td>ريال مدريد</td><td>95</td><td>برشلونة</td><td>10</td></tr>
+                                <tr><td>2022-23</td><td>برشلونة</td><td>88</td><td>ريال مدريد</td><td>10</td></tr>
+                                <tr><td>2021-22</td><td>ريال مدريد</td><td>86</td><td>برشلونة</td><td>13</td></tr>
+                                <tr><td>2020-21</td><td>أتلتيكو مدريد</td><td>86</td><td>ريال مدريد</td><td>2</td></tr>
+                                <tr><td>2019-20</td><td>ريال مدريد</td><td>87</td><td>برشلونة</td><td>5</td></tr>
+                                <tr><td>2018-19</td><td>برشلونة</td><td>87</td><td>أتلتيكو مدريد</td><td>11</td></tr>
+                                <tr><td>2017-18</td><td>برشلونة</td><td>93</td><td>أتلتيكو مدريد</td><td>14</td></tr>
+                                <tr><td>2016-17</td><td>ريال مدريد</td><td>93</td><td>برشلونة</td><td>3</td></tr>
+                                <tr><td>2015-16</td><td>برشلونة</td><td>91</td><td>ريال مدريد</td><td>1</td></tr>
+                                <tr><td>2014-15</td><td>برشلونة</td><td>94</td><td>ريال مدريد</td><td>2</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <!-- الدوري الإيطالي - معلومات موسعة -->
+                <article id="serie-a" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header seriea">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="league-icon">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h2 class="league-title">الدوري الإيطالي</h2>
+                                <p class="league-subtitle">دوري التكتيك الدفاعي المتقن والأساطير التاريخية</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">123</h4>
+                                    <p>موسمًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">20</h4>
+                                    <p>فريقًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">16</h4>
+                                    <p>فرق فازت باللقب</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">36</h4>
+                                    <p>لقب ليوفنتوس</td>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title seriea">التاريخ العريق</h3>
+                        <p>الدوري الإيطالي (Serie A) هو بطولة كرة القدم للقسم الأول في إيطاليا. تأسس في عام 1898، وهو ثاني أقدم دوري في العالم بعد الدوري الإنجليزي. شهد الدوري ذروته في الثمانينات والتسعينات من القرن الماضي عندما كان يضم أفضل اللاعبين في العالم وكان يلقب بـ"الدوري الأجمل في العالم".</p>
+                        
+                        <div class="info-card seriea">
+                            <h5><i class="fas fa-info-circle me-2"></i>حقائق مميزة</h5>
+                            <p class="mb-0">يوفنتوس هو النادي الوحيد في أوروبا الذي فاز بجميع المسابقات الرسمية المحلية والقارية والدولية. كما يحمل الرقم القياسي لأكبر عدد من الألقاب المتتالية (9 ألقاب من 2012 إلى 2020).</p>
+                        </div>
+
+                        <h4 class="mt-5">الفرق التاريخية الكبرى</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-card seriea">
+                                    <h5>يوفنتوس</h5>
+                                    <p class="mb-2"><strong>36 لقبًا</strong></p>
+                                    <p class="small mb-0">أول لقب: 1905<br>آخر لقب: 2020</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card seriea">
+                                    <h5>إنتر ميلان</h5>
+                                    <p class="mb-2"><strong>19 لقبًا</strong></p>
+                                    <p class="small mb-0">أول لقب: 1910<br>آخر لقب: 2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card seriea">
+                                    <h5>ميلان</h5>
+                                    <p class="mb-2"><strong>19 لقبًا</strong></p>
+                                    <p class="small mb-0">أول لقب: 1901<br>آخر لقب: 2022</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-5">الهدافون التاريخيون</h4>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>المركز</th>
+                                    <th>اللاعب</th>
+                                    <th>الأهداف</th>
+                                    <th>المباريات</th>
+                                    <th>متوسط</th>
+                                    <th>النادي الرئيسي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td><strong>سيلفيو بيولا</strong></td><td>274</td><td>537</td><td>0.51</td><td>لاتسيو</td></tr>
+                                <tr><td>2</td><td><strong>فرانشيسكو توتي</strong></td><td>250</td><td>619</td><td>0.40</td><td>روما</td></tr>
+                                <tr><td>3</td><td><strong>جونار نوردال</strong></td><td>225</td><td>291</td><td>0.77</td><td>ميلان</td></tr>
+                                <tr><td>4</td><td><strong>جوزيبي مياتزا</strong></td><td>216</td><td>367</td><td>0.59</td><td>إنتر ميلان</td></tr>
+                                <tr><td>5</td><td><strong>خوسيه ألتافيني</strong></td><td>216</td><td>459</td><td>0.47</td><td>ميلان</td></tr>
+                                <tr><td>6</td><td><strong>روبرتو باجيو</strong></td><td>205</td><td>452</td><td>0.45</td><td>يوفنتوس</td></tr>
+                                <tr><td>7</td><td><strong>كورت هامرين</strong></td><td>190</td><td>400</td><td>0.48</td><td>فيورنتينا</td></tr>
+                                <tr><td>8</td><td><strong>جوزيبي سينيوري</strong></td><td>188</td><td>344</td><td>0.55</td><td>لاتسيو</td></tr>
+                                <tr><td>9</td><td><strong>أليساندرو ديل بييرو</strong></td><td>188</td><td>478</td><td>0.39</td><td>يوفنتوس</td></tr>
+                                <tr><td>10</td><td><strong>ألبيرتو جيلاردينو</strong></td><td>188</td><td>514</td><td>0.37</td><td>ميلان</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-5">الديربيات التاريخية</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="info-card seriea">
+                                    <h5>ديربي ديلا مادونينا</h5>
+                                    <p class="mb-2">ميلان ضد إنتر ميلان</p>
+                                    <p class="small mb-1">أول مباراة: 1909</p>
+                                    <p class="small mb-1">إجمالي المباريات: 237</p>
+                                    <p class="small mb-0">فوز ميلان: 78 | فوز إنتر: 88 | تعادل: 71</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card seriea">
+                                    <h5>ديربي دي إيطاليا</h5>
+                                    <p class="mb-2">يوفنتوس ضد إنتر ميلان</p>
+                                    <p class="small mb-1">أول مباراة: 1909</p>
+                                    <p class="small mb-1">إجمالي المباريات: 257</p>
+                                    <p class="small mb-0">فوز يوفنتوس: 115 | فوز إنتر: 80 | تعادل: 62</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- الدوري الألماني - معلومات موسعة -->
+                <article id="bundesliga" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header bundesliga">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="league-icon">
+                                <i class="fas fa-beer"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h2 class="league-title">الدوري الألماني</h2>
+                                <p class="league-subtitle">دوري الهجوم الجماعي والجماهير الأكثر حماسًا في أوروبا</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">61</h4>
+                                    <p>موسمًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">18</h4>
+                                    <p>فريقًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">12</h4>
+                                    <p>فرق فازت باللقب</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">365</h4>
+                                    <p>هدف لجيرد مولر</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title bundesliga">التأسيس والتطور</h3>
+                        <p>تأسس البوندسليجا (Bundesliga) في عام 1963، بعد قرار اتحاد كرة القدم الألماني بإنشاء دوري موحد لكرة القدم الاحترافية. أول موسم 1963-1964 شاركت فيه 16 فريقًا، وفاز به كولن بفارق 6 نقاط عن دويسبورغ.</p>
+                        
+                        <div class="info-card bundesliga">
+                            <h5><i class="fas fa-info-circle me-2"></i>حضور الجماهير</h5>
+                            <p class="mb-0">البوندسليجا لديه أعلى متوسط حضور جماهيري في العالم، حيث يبلغ 42,000 متفرج لكل مباراة. تصل نسبة ملء الملاعب إلى 93% في المتوسط.</p>
+                        </div>
+
+                        <h4 class="mt-5">هيمنة بايرن ميونخ</h4>
+                        <p>بايرن ميونخ هو الأكثر هيمنة على البوندسليجا، حيث فاز بـ 32 لقبًا من أصل 61 موسم. منذ عام 2013، فاز بايرن بـ 11 لقبًا متتاليًا، وهو رقم قياسي عالمي.</p>
+                        
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>الموسم</th>
+                                    <th>البطل</th>
+                                    <th>النقاط</th>
+                                    <th>الفرق عن الثاني</th>
+                                    <th>الهداف</th>
+                                    <th>الأهداف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>2023-24</td><td>بايرن ميونخ</td><td>71</td><td>2</td><td>هاري كين</td><td>36</td></tr>
+                                <tr><td>2022-23</td><td>بوروسيا دورتموند</td><td>71</td><td>2</td><td>نيكلاس فولكروغ</td><td>16</td></tr>
+                                <tr><td>2021-22</td><td>بايرن ميونخ</td><td>77</td><td>8</td><td>روبرت ليفاندوفسكي</td><td>35</td></tr>
+                                <tr><td>2020-21</td><td>بايرن ميونخ</td><td>78</td><td>13</td><td>روبرت ليفاندوفسكي</td><td>41</td></tr>
+                                <tr><td>2019-20</td><td>بايرن ميونخ</td><td>82</td><td>13</td><td>روبرت ليفاندوفسكي</td><td>34</td></tr>
+                                <tr><td>2018-19</td><td>بايرن ميونخ</td><td>78</td><td>2</td><td>روبرت ليفاندوفسكي</td><td>22</td></tr>
+                                <tr><td>2017-18</td><td>بايرن ميونخ</td><td>84</td><td>21</td><td>روبرت ليفاندوفسكي</td><td>29</td></tr>
+                                <tr><td>2016-17</td><td>بايرن ميونخ</td><td>82</td><td>15</td><td>بيير إيمريك أوباميانغ</td><td>31</td></tr>
+                                <tr><td>2015-16</td><td>بايرن ميونخ</td><td>88</td><td>10</td><td>روبرت ليفاندوفسكي</td><td>30</td></tr>
+                                <tr><td>2014-15</td><td>بايرن ميونخ</td><td>79</td><td>10</td><td>ألكسندر ماير</td><td>19</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <!-- الدوري الفرنسي - معلومات موسعة -->
+                <article id="ligue-1" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header ligue1">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="league-icon">
+                                <i class="fas fa-eiffel-tower"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h2 class="league-title">الدوري الفرنسي</h2>
+                                <p class="league-subtitle">دوري المواهب الشابة والاستثمارات الضخمة</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">91</h4>
+                                    <p>موسمًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">18</h4>
+                                    <p>فريقًا</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">18</h4>
+                                    <p>فرق فازت باللقب</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="text-center">
+                                    <h4 class="fw-bold">299</h4>
+                                    <p>هدف لديلبيو أونيس</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title ligue1">التاريخ والتنافس</h3>
+                        <p>تأسس الدوري الفرنسي (Ligue 1) في عام 1932 تحت اسم "البطولة الاحترافية". أول موسم شاركت فيه 20 فريقًا، وفاز به أولمبيك ليل. شهد الدوري تناوبًا في الهيمنة بين عدة أندية، مع بروز باريس سان جيرمان في العقد الأخير.</p>
+                        
+                        <div class="info-card ligue1">
+                            <h5><i class="fas fa-info-circle me-2"></i>حقائق عن PSG</h5>
+                            <p class="mb-0">باريس سان جيرمان يحمل الرقم القياسي لأكبر عدد من النقاط في موسم واحد (96 نقطة في 2015-16) وأكبر فرق نقاط عن المركز الثاني (31 نقطة في 2019-20).</p>
+                        </div>
+
+                        <h4 class="mt-5">أبرز الفائزين بالألقاب</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="info-card ligue1">
+                                    <h5>سانت إتيان</h5>
+                                    <p class="mb-2">10 ألقاب</p>
+                                    <p class="small mb-0">عصر الهيمنة: 1964-1981</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card ligue1">
+                                    <h5>باريس سان جيرمان</h5>
+                                    <p class="mb-2">11 لقبًا</p>
+                                    <p class="small mb-0">عصر الهيمنة: 2013-2024</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card ligue1">
+                                    <h5>مارسيليا</h5>
+                                    <p class="mb-2">9 ألقاب</p>
+                                    <p class="small mb-0">العصر الذهبي: 1989-1993</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- قسم المقارنة -->
+                <article id="comparison" class="league-card animate__animated animate__fadeInUp">
+                    <div class="league-header" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+                        <h2 class="league-title">مقارنة شاملة بين الدوريات</h2>
+                        <p class="league-subtitle">تحليل إحصائي مقارن لموسم 2023-2024</p>
+                    </div>
+                    
+                    <div class="league-content">
+                        <h3 class="section-title" style="color: #6c5ce7;">المقارنة الإحصائية الشاملة</h3>
+                        
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>المعيار</th>
+                                    <th>الدوري الإنجليزي</th>
+                                    <th>الدوري الإسباني</th>
+                                    <th>الدوري الإيطالي</th>
+                                    <th>الدوري الألماني</th>
+                                    <th>الدوري الفرنسي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>متوسط الأهداف/مباراة</strong></td><td>2.85</td><td>2.51</td><td>2.68</td><td>3.17</td><td>2.78</td></tr>
+                                <tr><td><strong>متوسط الاستحواذ (%)</strong></td><td>50.2</td><td>52.7</td><td>49.8</td><td>51.4</td><td>50.5</td></tr>
+                                <tr><td><strong>متوسط التمريرات/مباراة</strong></td><td>896</td><td>912</td><td>857</td><td>832</td><td>865</td></tr>
+                                <tr><td><strong>دقة التمريرات (%)</strong></td><td>82.1</td><td>84.3</td><td>81.5</td><td>80.7</td><td>81.9</td></tr>
+                                <tr><td><strong>متوسط التسديدات/مباراة</strong></td><td>25.3</td><td>23.8</td><td>24.1</td><td>26.7</td><td>24.5</td></tr>
+                                <tr><td><strong>دقة التسديدات على المرمى (%)</strong></td><td>34.2</td><td>33.7</td><td>32.9</td><td>35.1</td><td>33.5</td></tr>
+                                <tr><td><strong>متوسط الأخطاء/مباراة</strong></td><td>22.1</td><td>20.3</td><td>24.7</td><td>19.8</td><td>21.4</td></tr>
+                                <tr><td><strong>متوسط البطاقات الصفراء/مباراة</strong></td><td>3.8</td><td>3.5</td><td>4.2</td><td>3.3</td><td>3.7</td></tr>
+                                <tr><td><strong>متوسط البطاقات الحمراء/مباراة</strong></td><td>0.12</td><td>0.09</td><td>0.15</td><td>0.08</td><td>0.11</td></tr>
+                                <tr><td><strong>متوسط عمر اللاعبين</strong></td><td>26.8</td><td>27.2</td><td>27.5</td><td>26.3</td><td>25.9</td></tr>
+                                <tr><td><strong>نسبة اللاعبين الأجانب (%)</strong></td><td>65.3</td><td>42.1</td><td>55.8</td><td>52.7</td><td>48.3</td></tr>
+                                <tr><td><strong>القيمة السوقية (مليار يورو)</strong></td><td>10.2</td><td>5.1</td><td>4.8</td><td>4.3</td><td>3.9</td></tr>
+                                <tr><td><strong>متوسط الحضور (ألف)</strong></td><td>40.2</td><td>28.7</td><td>31.4</td><td>42.1</td><td>23.8</td></tr>
+                                <tr><td><strong>نسبة ملء الملاعب (%)</strong></td><td>97.8</td><td>73.2</td><td>68.4</td><td>93.1</td><td>81.7</td></tr>
+                                <tr><td><strong>قيمة عقود البث (مليار يورو/موسم)</strong></td><td>3.9</td><td>1.9</td><td>1.3</td><td>1.4</td><td>0.8</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-5">تصنيف UEFA للدوريات (2024)</h4>
+                        <table class="stats-table">
+                            <thead>
+                                <tr>
+                                    <th>المركز</th>
+                                    <th>الدوري</th>
+                                    <th>نقاط UEFA</th>
+                                    <th>تغيير عن 2023</th>
+                                    <th>مقاعد دوري الأبطال</th>
+                                    <th>إجمالي المقاعد الأوروبية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td><strong>الدوري الإنجليزي</strong></td><td>106.641</td><td>+2.714</td><td>4</td><td>7</td></tr>
+                                <tr><td>2</td><td><strong>الدوري الإسباني</strong></td><td>96.141</td><td>+1.857</td><td>4</td><td>7</td></tr>
+                                <tr><td>3</td><td><strong>الدوري الإيطالي</strong></td><td>76.902</td><td>+4.286</td><td>4</td><td>7</td></tr>
+                                <tr><td>4</td><td><strong>الدوري الألماني</strong></td><td>75.213</td><td>+3.571</td><td>4</td><td>7</td></tr>
+                                <tr><td>5</td><td><strong>الدوري الفرنسي</strong></td><td>60.081</td><td>+2.143</td><td>3</td><td>6</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+
+            <!-- الشريط الجانبي -->
+            <div class="col-lg-4">
+                <div class="sidebar-sticky">
+                    <!-- عن الموسوعة -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header card-premier">
+                            <i class="fas fa-book me-2"></i>عن الموسوعة
+                        </div>
+                        <div class="sidebar-card-body">
+                            <p class="small text-muted">هذه الموسوعة تحتوي على أكبر قدر ممكن من المعلومات التفصيلية والمحدثة عن الدوريات الخمسة الكبرى في كرة القدم، مع إحصائيات دقيقة حتى نهاية موسم 2023-2024.</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="me-3">
+                                    <i class="fas fa-calendar-check text-primary fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">آخر تحديث</h6>
+                                    <p class="small text-muted mb-0">يونيو 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- لعبة تحدي الأبطال -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header card-ligue1">
+                            <i class="fas fa-gamepad me-2"></i>تحدي الأبطال
+                        </div>
+                        <div class="sidebar-card-body text-center">
+                            <p class="small mb-3">استخدم معلومات الموسوعة لتصبح أفضل لاعب في تحدي الأبطال واربح العملات الذهبية والمكافآت الحصرية!</p>
+                            <a href="https://play.tahady-elaptal.online/" class="btn btn-gradient btn-premier w-100 mb-3">
+                                <i class="fas fa-play-circle me-2"></i>العب الآن
+                            </a>
+                            <div class="d-flex justify-content-around mt-3">
+                                <div class="text-center">
+                                    <i class="fas fa-users fa-2x text-primary"></i>
+                                    <p class="small mt-2 mb-0">500K+ لاعب</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-trophy fa-2x text-warning"></i>
+                                    <p class="small mt-2 mb-0">10K+ جائزة</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-coins fa-2x text-success"></i>
+                                    <p class="small mt-2 mb-0">5M+ عملة ذهبية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- روابط سريعة -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header" style="background: linear-gradient(135deg, #00b894, #00cec9);">
+                            <i class="fas fa-link me-2"></i>روابط سريعة
+                        </div>
+                        <div class="sidebar-card-body">
+                            <div class="list-group list-group-flush">
+                                <a href="privacy.html" class="list-group-item list-group-item-action border-0 py-3">
+                                    <i class="fas fa-shield-alt me-2 text-primary"></i>سياسة الخصوصية
+                                </a>
+                                <a href="terms.html" class="list-group-item list-group-item-action border-0 py-3">
+                                    <i class="fas fa-file-contract me-2 text-success"></i>شروط الاستخدام
+                                </a>
+                                <a href="contact.html" class="list-group-item list-group-item-action border-0 py-3">
+                                    <i class="fas fa-envelope me-2 text-danger"></i>اتصل بنا
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="fw-bold mb-4">
+                        <i class="fas fa-trophy me-2"></i>موسوعة تحدي الأبطال
+                    </h4>
+                    <p class="small">أكبر موسوعة عربية شاملة عن دوريات كرة القدم الخمسة الكبرى، نقدم معلومات مفصلة وموثقة تساعدك على الفوز في لعبة تحدي الأبطال.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 rounded-circle p-2">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 rounded-circle p-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 rounded-circle p-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4">الدوريات</h5>
+                    <div class="footer-links">
+                        <a href="#premier-league">الدوري الإنجليزي</a>
+                        <a href="#la-liga">الدوري الإسباني</a>
+                        <a href="#serie-a">الدوري الإيطالي</a>
+                        <a href="#bundesliga">الدوري الألماني</a>
+                        <a href="#ligue-1">الدوري الفرنسي</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4">المحتوى</h5>
+                    <div class="footer-links">
+                        <a href="#comparison">مقارنة الدوريات</a>
+                        <a href="#premier-league">الهدافون التاريخيون</a>
+                        <a href="#premier-league">أفضل الأندية</a>
+                        <a href="#la-liga">الأساطير والرموز</a>
+                        <a href="#serie-a">السجلات القياسية</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4">الدعم والمساعدة</h5>
+                    <div class="footer-links">
+                        <a href="contact.html">اتصل بنا</a>
+                        <a href="privacy.html">سياسة الخصوصية</a>
+                        <a href="terms.html">شروط الاستخدام</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small mb-0">&copy; 2025 موسوعة تحدي الأبطال. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">تم التحديث في: يونيو 2025 | الإصدار: 3.0 الموسع</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        // شريط التقدم عند التمرير
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+            
+            // إظهار/إخفاء زر العودة للأعلى
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+            
+            // تأثير الشريط العلوي عند التمرير
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // زر العودة للأعلى
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // التنعيم للروابط الداخلية
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // تحديث الروابط النشطة في الشريط العلوي
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('article');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // تأثيرات للكروت عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+        
+        // مراقبة جميع كروت الدوريات
+        document.querySelectorAll('.league-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // تفعيل علامات التبويب عند النقر
+        document.querySelectorAll('.nav-tabs-custom .nav-link').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // إزالة النشاط من جميع علامات التبويب
+                document.querySelectorAll('.nav-tabs-custom .nav-link').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // إضافة النشاط للعلامة المحددة
+                this.classList.add('active');
+            });
+        });
+        
+        // تحميل الصفحة مع تأثيرات
+        document.addEventListener('DOMContentLoaded', function() {
+            // إضافة تأثير للعناصر بعد تحميل الصفحة
+            setTimeout(() => {
+                document.querySelector('.blog-header h1').classList.add('animate__animated', 'animate__fadeInDown');
+                document.querySelector('.blog-header p').classList.add('animate__animated', 'animate__fadeInUp');
+            }, 300);
+        });
+    </script>
+</body>

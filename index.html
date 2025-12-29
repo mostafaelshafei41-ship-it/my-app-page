@@ -3,119 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق تحدي الأبطال - صفحة الهبوط الرسمية</title>
+    <meta name="description" content="تحدي الأبطال هي لعبة مسابقات كرة قدم أونلاين. نافس أصدقائك في معلومات الساحرة المستديرة، خمن اللاعب، وتصدر الدوري. العب الآن مجاناً.">
+    <title>تحدي الأبطال - لعبة مسابقات كرة قدم أونلاين</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4803557644630676"
+     crossorigin="anonymous"></script>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
             color: #343a40;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+        
+        /* Hero Section */
         .hero-section {
-            background: linear-gradient(45deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, #0056b3, #007bff);
             color: white;
-            padding: 80px 0;
+            padding: 80px 0 120px 0;
             text-align: center;
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
+            border-bottom-left-radius: 50% 10%;
+            border-bottom-right-radius: 50% 10%;
+            position: relative;
         }
         .hero-section h1 {
             font-size: 3.5rem;
-            font-weight: bold;
+            font-weight: 900;
             margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .hero-section p.lead {
             font-size: 1.25rem;
             max-width: 800px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
         }
         .app-logo {
             max-width: 180px;
             height: auto;
-            border-radius: 20%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             margin-bottom: 30px;
+            border: 4px solid rgba(255,255,255,0.2);
         }
+
+        /* Buttons */
         .store-buttons a {
-            display: inline-block;
-            margin: 10px 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px;
             padding: 15px 30px;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            min-width: 220px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            min-width: 240px;
         }
         .store-buttons a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
-        .btn-amazon { background-color: #FF9900; color: white; }
-        .btn-google-play { background-color: #4285F4; color: white; }
-        .btn-apk { background-color: #28a745; color: white; }
-        
-        /* !!! هذا هو الكود الجديد الذي تم إضافته !!! */
-        .btn-apkpure { background-color: #00BFA5; color: white; }
-        
-        .btn-soon { background-color: #6c757d; color: white; cursor: not-allowed; }
+        .btn-webapp { 
+            background: linear-gradient(45deg, #FFC107, #FF9800); 
+            color: #000 !important;
+            border: 2px solid #fff;
+            font-size: 1.3rem !important;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+        }
+        .btn-amazon { background-color: #232f3e; color: white !important; }
+        .btn-google-play { background-color: #4285F4; color: white !important; }
+        .btn-apkpure { background-color: #00BFA5; color: white !important; }
+        .btn-soon { background-color: #6c757d; color: white !important; cursor: not-allowed; opacity: 0.7; }
 
-        .features-section, .screenshots-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .features-section h2, .screenshots-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #007bff;
-            font-weight: bold;
-        }
+        /* Features */
         .feature-item {
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 20px;
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             margin-bottom: 30px;
             height: 100%; 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            transition: transform 0.3s;
+            text-align: center;
         }
+        .feature-item:hover { transform: translateY(-10px); }
         .feature-item i {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #007bff;
-            margin-bottom: 15px;
-        }
-        .feature-item h3 {
-            font-size: 1.5rem;
-            color: #343a40;
-            margin-bottom: 10px;
-        }
-        
-        .carousel-inner img {
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
+        /* Carousel */
+        .carousel-inner img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 5px solid white;
+        }
+
+        /* Footer */
         footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 50px 0 20px 0;
             text-align: center;
             margin-top: 50px;
         }
+        footer a { color: #adb5bd; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        footer a:hover { color: white; }
+        .footer-links {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #343a40;
+            padding-bottom: 20px;
+        }
+
         .apk-warning {
             font-size: 0.9em;
-            color: #e9ecef;
-            margin-top: 20px;
-            max-width: 500px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 30px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            background: linear-gradient(135deg, #0056b3, #007bff);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 86, 179, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.3);
+        }
+        
+        .blog-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .blog-card p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-blog {
+            background-color: white;
+            color: #0056b3;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-blog:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #0056b3;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            background: white;
+            padding: 20px 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .faq-answer.show {
+            padding: 20px 25px;
+            max-height: 1000px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.rotated {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -123,67 +251,361 @@
 
     <header class="hero-section">
         <div class="container">
-            <img src="logo.png" alt="شعار تطبيق تحدي الأبطال" class="app-logo">
+            <img src="logo.png" alt="شعار لعبة تحدي الأبطال" class="app-logo">
             <h1>مرحباً بك في تحدي الأبطال!</h1>
             <p class="lead">
-                استمتع بمجموعة متنوعة من الألعاب الرياضية الممتعة وتحديات مباشرة ضد لاعبين آخرين عبر الإنترنت. اختبر معرفتك وسرعتك في ألعاب تنافسية بنظام الأدوار مثل "بنك" و "خمن اللاعب؟"، ونافس على صدارة لوحة المتصدرين العالمية أو أنشئ غرفاً خاصة لتحدي أصدقائك. مع أسئلة متجددة باستمرار بواسطة الذكاء الاصطناعي ووسائل مساعدة استراتيجية، كل لعبة هي تحدٍ جديد!
+                أقوى لعبة مسابقات كرة قدم عربية. اختبر معلوماتك الرياضية، تحدَّ أصدقائك في غرف خاصة، ونافس آلاف اللاعبين في وضع الأونلاين المباشر. هل تملك ما يلزم لتكون بطل الموسم؟
             </p>
+            
             <div class="store-buttons">
+                <div class="mb-3">
+                    <a href="https://play.tahady-elaptal.online/" class="btn-webapp">
+                        <i class="bi bi-play-circle-fill"></i> العب الآن (بدون تحميل)
+                    </a>
+                </div>
+
                 <a href="https://www.amazon.com/dp/B0FY7ZXNPZ/" target="_blank" class="btn-amazon">
-                    <i class="bi bi-shop"></i> متوفر على أمازون
-                </a>
-                <a href="app-release.apk" download class="btn-apk">
-                    <i class="bi bi-download"></i> تحميل مباشر (APK)
+                    <i class="bi bi-amazon"></i> متوفر على أمازون
                 </a>
                 
                 <a href="https://apkpure.com/%D8%AA%D8%AD%D8%AF%D9%8A-%D8%A7%D9%84%D8%A3%D8%A8%D8%B7%D8%A7%D9%84/com.mostafa165.app" target="_blank" class="btn-apkpure">
-                    <img src="apkpure-logo.png" alt="APKPure" style="height: 20px; margin-left: 5px; vertical-align: middle;"> متوفر على APKPure
+                    <i class="bi bi-android2"></i> تحميل APKPure
                 </a>
                 
                 <a href="#" class="btn-soon btn-google-play" onclick="return false;">
                     <i class="bi bi-google-play"></i> قريباً على Google Play
                 </a>
             </div>
-            <p class="apk-warning mt-4">
-                <strong>تنبيه:</strong> عند التحميل المباشر (APK)، قد تحتاج إلى تفعيل خيار "تثبيت التطبيقات من مصادر غير معروفة" (Unknown Sources) في إعدادات الأمان بهاتفك.
+
+            <p class="apk-warning">
+                <strong>تنبيه:</strong> يمكنك اللعب فوراً من المتصفح عبر زر "العب الآن" دون الحاجة لتثبيت أي ملفات.
             </p>
         </div>
     </header>
 
-    <section class="features-section">
+    <section class="features-section py-5">
         <div class="container">
-            <h2>لماذا تحدي الأبطال؟</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">لماذا تحدي الأبطال؟</h2>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="feature-item">
                         <i class="bi bi-controller"></i>
-                        <h3>لعب ممتع وتحديات مستمرة</h3>
-                        <p>استمتع بساعات لا نهائية من الترفيه مع مجموعة متنوعة من الألعاب والتحديات.</p>
+                        <h3>تنوع في الألعاب</h3>
+                        <p>استمتع بأنماط لعب متعددة: "من اللاعب؟"، "توقع التشكيلة"، "أسئلة ريسك"، والمزيد من التحديات التي يتم تحديثها أسبوعياً.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item">
                         <i class="bi bi-people-fill"></i>
-                        <h3>نافس أصدقائك</h3>
-                        <p>ادعُ أصدقائك، شكّلوا فرقاً، وتنافسوا على صدارة قوائم المتصدرين العالمية.</p>
+                        <h3>لعب جماعي أونلاين</h3>
+                        <p>نظام Matchmaking ذكي يضعك في مواجهة خصوم من مستواك، أو أنشئ غرفة خاصة والعب ضد أصدقائك مباشرة.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item">
-                        <i class="bi bi-gift-fill"></i>
-                        <h3>جوائز ومكافآت يومية</h3>
-                        <p>اجمع الجوائز والمكافآت الحصرية لتطوير حسابك وفتح محتوى جديد باستمرار.</p>
+                        <i class="bi bi-trophy-fill"></i> <h3>تصدر القائمة</h3>
+                        <p>اجمع النقاط من الفوز في المباريات لتصعد في سلم الترتيب العالمي (Leaderboard) وتحصل على ألقاب وميداليات حصرية.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="screenshots-section bg-light">
+    <section class="game-guide-section py-5 bg-light">
         <div class="container">
-            <h2>لقطات من داخل اللعبة</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">دليل اللاعب المحترف</h2>
+                <p class="text-muted">كل ما تحتاج معرفته عن أنظمة اللعب، احتساب النقاط، والترقي في المستويات</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-bar-chart-line-fill"></i> نظام التصنيف (Ranking)</h3>
+                        <p>تعتمد لعبة "تحدي الأبطال" على خوارزمية متقدمة لتقييم المهارة. يبدأ جميع اللاعبين بتصنيف 1000 نقطة. عند الفوز، تكتسب نقاطاً بناءً على قوة الخصم:</p>
+                        <ul>
+                            <li><strong>الفوز على خصم قوي:</strong> يمنحك نقاطاً مضاعفة (+25 نقطة أو أكثر).</li>
+                            <li><strong>الفوز على خصم ضعيف:</strong> يمنحك نقاطاً قليلة لضمان العدالة.</li>
+                            <li><strong>الخسارة:</strong> تفقدك نقاطاً، مما قد يؤدي لهبوطك للمستوى الأدنى.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-cpu-fill"></i> المتطلبات التقنية</h3>
+                        <p>تم تطوير اللعبة لتعمل بكفاءة وسرعة على جميع الأجهزة:</p>
+                        <ul>
+                            <li><strong>متصفحات الويب:</strong> Chrome, Firefox, Safari (الإصدارات الحديثة).</li>
+                            <li><strong>الإنترنت:</strong> تتطلب اللعبة اتصالاً مستقراً نظراً لطبيعة التنافس المباشر (Real-time).</li>
+                            <li><strong>السياسة:</strong> نستخدم أنظمة حماية لمنع استخدام أي برامج مساعدة (Bots) لضمان بيئة لعب عادلة للجميع.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rules-section py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 mb-2 rounded-pill">قوانين اللعب</span>
+                <h2 class="fw-bold">اكتشف 7 أنماط لعب مختلفة</h2>
+                <p class="text-muted" style="max-width: 700px; margin: 0 auto;">
+                    تحدي الأبطال ليست مجرد لعبة واحدة، بل هي مجموعة متكاملة من التحديات التي تختبر كل جوانب ثقافتك الكروية. إليك الدليل الرسمي لقوانين كل لعبة:
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">1. تحدي ريسك</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                مواجهة استراتيجية تتكون من <strong>4 فئات (Categories)</strong>، كل فئة تحتوي على 4 مستويات صعوبة (إجمالي 16 سؤال).
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-danger py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> النقاط تتصاعد حسب الصعوبة (5، 10، 20، 40). الإجابة الخاطئة لا تخصم نقاطاً. استخدم وسائل المساعدة بذكاء (سرقة السؤال، إظهار الاختيارات، تزويد الوقت) لحسم المنافسة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-person-bounding-box fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">2. خمن اللاعب؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لعبة ذكاء تفاعلية. لديك لاعب سري وخصمك لديه لاعب سري.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-primary py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> اطرح أسئلة ذكية (مثلاً: هل يلعب في الدوري الإنجليزي؟) لاستبعاد الخيارات. أول من يكتشف لاعب الخصم يفوز.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-life-preserver fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">3. اهبد صح</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                تحدي التقدير الرقمي. لا نطلب منك الرقم الدقيق، بل أقرب رقم صحيح.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-warning py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> في أسئلة مثل "كم عدد أهداف ميسي؟"، اللاعب الذي يكتب الرقم الأقرب للإجابة الصحيحة هو من يكسب الجولة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-wallet2 fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">4. تحدي البنك</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لعبة استراتيجية وإدارة مخاطر. كل إجابة صحيحة تزيد رصيدك المؤقت.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-success py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> يجب أن تضغط زر "بنك" لتثبيت نقاطك قبل انتهاء الوقت أو قبل الإجابة بالخطأ، وإلا ستفقد الرصيد المتراكم.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-eye-slash-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">5. أنا مين؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                لغز الشخصية الغامضة. نعطيك 5 أوصاف متدرجة من الصعب جداً إلى السهل.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-info py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> المعرفة المبكرة تساوي نقاطاً أكثر. إذا عرفت اللاعب من الوصف الأول تربح 100 نقطة، ومن الوصف الأخير 20 نقطة فقط.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-list-ol fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">6. قائمة Top 10</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                هل تعرف ترتيب الهدافين أو الأكثر مشاركة؟ عليك ملء القائمة بالترتيب.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-secondary py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> خمن العناصر الموجودة في القائمة. المراكز الدنيا (الصعبة) تمنحك نقاطاً أعلى من المراكز الأولى المعروفة.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border border-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="bi bi-camera-fill fs-4"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">7. مين في الصورة؟</h3>
+                            </div>
+                            <p class="text-secondary small">
+                                اختبر معرفتك بالفرق. ستظهر لك <strong>الصورة الجماعية الرسمية للفريق (Squad Photo)</strong> قبل بداية المباراة.
+                            </p>
+                            <div class="alert alert-light border-start border-4 border-dark py-2" role="alert">
+                                <small><strong>🏆 قانون الفوز:</strong> انظر للصورة جيداً، وتعرف على وجوه اللاعبين في التشكيلة، ثم اكتب أسماءهم بشكل صحيح.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المدونة المضافة -->
+    <section class="blog-section">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12">
+                <div class="col-lg-8">
+                    <div class="blog-card">
+                        <h3><i class="bi bi-journal-text me-2"></i>مدونة تحدي الأبطال</h3>
+                        <p>اقرأ مقالاتنا الشاملة عن كرة القدم لتطوير معرفتك والتفوق في اللعبة. موسوعة كاملة عن الدوريات الخمسة الكبرى، الهدافين التاريخيين، المدربين الأساطير، والتكتيكات الكروية.</p>
+                        <a href="blog.html" class="btn-blog">
+                            <i class="bi bi-arrow-left me-2"></i>اذهب إلى المدونة الكاملة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة المضافة -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">الأسئلة الشائعة</h2>
+            <p class="text-center text-muted mb-5">إجابات على أكثر الأسئلة شيوعاً من اللاعبين</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>هل اللعبة مجانية حقاً؟</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، تحدي الأبطال مجانية بالكامل. يمكنك اللعب مع الأصدقاء، التنافس في وضع الأونلاين، والوصول إلى جميع أنماط اللعب دون أي رسوم. هناك عناصر داخل اللعبة يمكن شراؤها اختيارياً لتحسين التجربة.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>كيف يمكنني تحسين ترتيبي في اللعبة؟</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>يمكنك تحسين ترتيبك من خلال:
+                                <ul>
+                                    <li>الفوز في المباريات ضد خصوم ذوي تصنيف عالٍ</li>
+                                    <li>اللعب بانتظام للحفاظ على نشاط حسابك</li>
+                                    <li>استكمال المهام اليومية والأسبوعية</li>
+                                    <li>التحدي في جميع أنماط اللعب المختلفة</li>
+                                    <li>قراءة مقالات المدونة لتحسين معرفتك الكروية</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>هل يمكنني اللعب مع أصدقائي؟</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>بالتأكيد! يمكنك إنشاء غرفة خاصة وإرسال رمز الغرفة لأصدقائك للانضمام. يمكنك أيضاً تحديهم مباشرة عبر قائمة الأصدقاء في اللعبة. اللعب مع الأصدقاء ممتع ويسمح لك بممارسة مهاراتك قبل المنافسة مع اللاعبين الآخرين.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>كيف يتم تحديث الأسئلة في اللعبة؟</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نقوم بتحديث قاعدة أسئلة اللعبة أسبوعياً لضمان:
+                                <ul>
+                                    <li>إضافة أحدث المعلومات عن المباريات واللاعبين</li>
+                                    <li>تنويع الأسئلة لتشمل جميع جوانب كرة القدم</li>
+                                    <li>تصحيح أي معلومات قديمة أو غير دقيقة</li>
+                                    <li>إضافة أسئلة موسمية متعلقة بالبطولات الجارية</li>
+                                </ul>
+                                قاعدة بياناتنا تحتوي على أكثر من 10,000 سؤال متنوع.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>ما هي متطلبات تشغيل اللعبة؟</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>متطلبات تشغيل اللعبة بسيطة:
+                                <ul>
+                                    <li>متصفح ويب حديث (Chrome، Firefox، Safari، Edge)</li>
+                                    <li>اتصال إنترنت مستقر (للعب الأونلاين)</li>
+                                    <li>جهاز مع دعم JavaScript</li>
+                                    <li>للإصدارات المحمولة: Android 5.0+ أو iOS 11.0+</li>
+                                </ul>
+                                يمكنك اللعب مباشرة من المتصفح دون الحاجة لتحميل أي تطبيق.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots-section py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-5 text-center fw-bold">لقطات من داخل اللعبة</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
                     <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -202,11 +624,11 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -217,10 +639,42 @@
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">سياسة الخصوصية</a>
+                <a href="terms.html">شروط الاستخدام</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="blog.html">المدونة</a>
+            </div>
+            
             <p>&copy; 2025 تحدي الأبطال. جميع الحقوق محفوظة.</p>
+            <div class="mt-2">
+                <small>تم التطوير بواسطة Mostafa</small>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // وظيفة الأسئلة الشائعة
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                icon.classList.remove('rotated');
+            } else {
+                // إغلاق جميع الإجابات الأخرى
+                document.querySelectorAll('.faq-answer.show').forEach(item => {
+                    item.classList.remove('show');
+                    item.previousElementSibling.querySelector('.faq-icon').classList.remove('rotated');
+                });
+                
+                answer.classList.add('show');
+                icon.classList.add('rotated');
+            }
+        }
+    </script>
 </body>
 </html>
